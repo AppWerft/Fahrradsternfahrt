@@ -1,0 +1,381 @@
+[
+	{
+		"title": "Finkenwerder Markt",
+		"subtitle": "Finksweg",
+		"zeit": "11:30",
+		"color": "lgreen",
+		"position": [53.5331985, 9.8785113]
+	}, {
+		"title": "Vollhöfner Weiden",
+		"subtitle": "Altenwerder/Waltershof",
+		"zeit": "11:50",
+		"color": "lgreen",
+		"position": [53.5132241, 9.9022809]
+	}, {
+		"title": "Neu Wulmstorf",
+		"subtitle": "S-Bahnhof",
+		"zeit": "10:15",
+		"color": "lgreen",
+		"position": [53.4730939, 9.7891121]
+	}, {
+		"title": "Este Sperrwerk",
+		"subtitle": "Cranz",
+		"zeit": "10:50",
+		"color": "lgreen",
+		"position": [53.5347857, 9.7884017]
+	}, {
+		"title": "Meckelfeld",
+		"subtitle": "Bahnhof",
+		"zeit": "10:15",
+		"color": "lgreen",
+		"position": [53.4243579, 10.0296815]
+	}, {
+		"title": "Buxtehude",
+		"subtitle": "Rathaus",
+		"zeit": "9:30",
+		"color": "lgreen",
+		"position": [53.4740608, 9.6954307]
+	}, {
+		"title": "Harburg",
+		"subtitle": "ZOB",
+		"zeit": "11:00",
+		"color": "lgreen",
+		"position": [53.4562980, 9.9915890]
+	}, {
+		"title": "Bergedorf",
+		"subtitle": "Bahnhofsvorplatz",
+		"zeit": "11:00",
+		"color": "magenta",
+		"position": [53.4898907, 10.2059125]
+	}, {
+		"title": "U-Bahnhof Billstedt",
+		"subtitle": "Reclamstrasse",
+		"zeit": "12:15",
+		"color": "magenta",
+		"position": [53.5427649, 10.1071588]
+	}, {
+		"title": "Henstedt-Ulzburg",
+		"subtitle": "Bahnhof",
+		"zeit": "10:15",
+		"color": "blue",
+		"position": [53.793839, 9.9814924]
+	}, {
+		"title": "Norderstedt",
+		"subtitle": "Rathausplatz",
+		"zeit": "11:15",
+		"color": "blue",
+		"position": [53.7043946, 10.0080181]
+	}, {
+		"title": "Krohnstieg",
+		"subtitle": "Langenhorner Chaussee",
+		"zeit": "12:00",
+		"color": "blue",
+		"position": [53.6487749, 10.0097771]
+	}, {
+		"title": "Ochsenzoll",
+		"subtitle": "U-Bahnhof",
+		"zeit": "11:30",
+		"color": "blue",
+		"position": [53.6779853, 10.0016439]
+	}, {
+		"title": "Niendorf",
+		"subtitle": "Kirche am Markt",
+		"zeit": "11:30",
+		"color": "blue",
+		"position": [53.61938, 9.951365]
+	}, {
+		"title": "Eidelstedter Platz",
+		"subtitle": "Eidelstedt",
+		"zeit": "11:45",
+		"color": "blue",
+		"position": [53.6083375, 9.9042707]
+	}, {
+		"title": "Osterstrasse",
+		"subtitle": "U-Bahnhof",
+		"zeit": "12:15",
+		"color": "blue",
+		"position": [53.5756877, 9.9538512]
+	}, {
+		"title": "Schenefeld",
+		"subtitle": "Holstenplatz",
+		"zeit": "12:15",
+		"color": "orange",
+		"position": [53.6004223, 9.8360413]
+	}, {
+		"title": "Lurup",
+		"subtitle": "Eckhoffplatz",
+		"zeit": "12:30",
+		"color": "orange",
+		"position": [53.5910548, 9.8736095]
+	}, {
+		"title": "Gut Karlshöhe",
+		"subtitle": "Bramfeld",
+		"zeit": "12:00",
+		"color": "magenta",
+		"position": [53.6290138, 10.1078235]
+	}, {
+		"title": "Pinneberg",
+		"subtitle": "Bahnhofsvorplatz",
+		"zeit": "11:15",
+		"color": "orange",
+		"position": [53.655179, 9.797608]
+	}, {
+		"title": "Halstenbek",
+		"subtitle": "Bahnhof",
+		"zeit": "11:45",
+		"color": "orange",
+		"position": [53.6300504, 9.839545]
+	}, {
+		"title": "Rellingen",
+		"subtitle": "Rathaus",
+		"zeit": "11:30",
+		"color": "orange",
+		"position": [53.651673, 9.829466]
+	}, {
+		"title": "Poppenbüttel",
+		"subtitle": "Stormarnplatz",
+		"zeit": "11:30",
+		"color": "magenta",
+		"position": [53.6516063, 10.0948386]
+	}, {
+		"title": "Volksdorf",
+		"subtitle": "Koralle",
+		"zeit": "11:15",
+		"color": "magenta",
+		"position": [53.651615, 10.163339]
+	}, {
+		"title": "Farmsen",
+		"subtitle": "U-Bahnhof",
+		"zeit": "12:15",
+		"color": "magenta",
+		"position": [53.6072031, 10.1178131]
+	}, {
+		"title": "Elbeeinkaufszentrum",
+		"subtitle": "Haupteingang",
+		"zeit": "12:45",
+		"color": "orange",
+		"position": [53.57041, 9.860532]
+	}, {
+		"title": "Rahlstedt",
+		"subtitle": "S-Bahnhof",
+		"zeit": "12:15",
+		"color": "magenta",
+		"position": [53.604857, 10.154396]
+	}, {
+		"title": "Wandsbeker Markt",
+		"subtitle": "bei Karstadt",
+		"zeit": "13:00",
+		"color": "magenta",
+		"position": [53.571726, 10.067301]
+	}, {
+		"title": "Wedel Holst.",
+		"subtitle": "S-Bahnhof",
+		"zeit": "8:00",
+		"color": "dgreen",
+		"position": [53.5811527, 9.7112126]
+	}, {
+		"title": "Blankenese",
+		"subtitle": "S-Bahnhof",
+		"zeit": "8:45",
+		"color": "dgreen",
+		"position": [53.563205, 9.7943581]
+	}, {
+		"title": "Altonaer Balkon",
+		"subtitle": "Altona",
+		"zeit": "9:30",
+		"color": "dgreen",
+		"position": [53.545404, 9.937326]
+	}, {
+		"title": "Bramfeld",
+		"subtitle": "Dorfplatz",
+		"zeit": "12:00",
+		"color": "blue",
+		"position": [53.6142964, 10.0777217]
+	}, {
+		"title": "Saarlandstrasse 6",
+		"subtitle": "Winterhude",
+		"zeit": "12:15",
+		"color": "blue",
+		"position": [53.5859208, 10.034506]
+	}, {
+		"title": "Neugraben",
+		"subitle": "S-Bahnhof",
+		"position": [53.4770725, 9.857907],
+		"zeit": "11:00",
+		"color": "lgreen"
+	}, {
+		"title": "Kehrwiederspitze",
+		"subtitle": "Speicherstadt",
+		"position": [53.5434374, 9.9830389],
+		"zeit": "9:45",
+		"color": "dgreen"
+	}, {
+		"title": "Harburg Rathaus",
+		"subtitle": "S-Bahnhof",
+		"position": [53.460677, 9.980282],
+		"zeit": "10:45",
+		"color": "lgreen"
+	}, {
+		"title": "Stade",
+		"subtitle": "Stadeum",
+		"position": [53.60369,9.46915],
+		"zeit": "8:30",
+		"color": "lgreen"
+	}, {
+		"title": "Lühe",
+		"subtitle": "Sperrwerk",
+		"position": [53.60369,9.46915],
+		"zeit": "9:30",
+		"color": "lgreen"
+	}, {
+		"title": "Buchholz",
+		"subtitle": "Möbel-Kraft",
+		"position": [53.34935,9.86236],
+		"zeit": "8:30",
+		"color": "lgreen"
+	}, {
+		"title": "Hanstedt",
+		"subtitle": "Alter Geidenhof",
+		"position": [53.252362,9.981204],
+		"zeit": "7:30",
+		"color": "lgreen"
+	}, {
+		"title": "Jesteburg",
+		"subtitle": "Seeve-Brücke",
+		"position": [53.3046175,9.9536801],
+		"zeit": "8:10",
+		"color": "lgreen"
+	}, {
+		"title": "Hittfeld",
+		"subtitle": "Einkaufspassage",
+		"position": [53.4047682,9.9767921],
+		"zeit": "9:30",
+		"color": "lgreen"
+	}, {
+		"title": "Wilhelmsburg",
+		"subtitle": "B73 ZOB",
+		"position": [53.498567,10.006004],
+		"zeit": "10:20",
+		"color": "dgreen"
+	}, {
+		"title": "Itzehoe",
+		"subtitle": "Umweltzentrum",
+		"position": [53.923581,9.522823],
+		"zeit": "6:45",
+		"color": "orange"
+	}, {
+		"title": "Krempe",
+		"subtitle": "Bahnhof",
+		"position": [53.8328657,9.4921668],
+		"zeit": "7:30",
+		"color": "orange"
+	}, {
+		"title": "Glückstadt",
+		"subtitle": "Bahnhof",
+		"position": [53.78875,9.428018],
+		"zeit": "8:15",
+		"color": "orange"
+	}, {
+		"title": "Elmshorn",
+		"subtitle": "Bahnhof",
+		"position": [53.755221,9.659062],
+		"zeit": "9:30",
+		"color": "orange"
+	}, {
+		"title": "Tornesch",
+		"subtitle": "Bahnhof",
+		"position": [53.697313,9.71497],
+		"zeit": "10:15",
+		"color": "orange"
+	}, {
+		"title": "Uetersen",
+		"subtitle": "Marktplatz",
+		"position": [53.6838893,9.6662918],
+		"zeit": "10:15",
+		"color": "orange"
+	}, {
+		"title": "Kellinghusen",
+		"subtitle": "Unterer Marktplatz",
+		"position": [53.9566154,9.7226433],
+		"zeit": "7:30",
+		"color": "blue"
+	}, {
+		"title": "Bad Bramstedt",
+		"subtitle": "Roland/Bleeck",
+		"position": [53.9155317,9.9025362],
+		"zeit": "8:30",
+		"color": "blue"
+	}, {
+		"title": "Kaltenkirchen",
+		"subtitle": "AKN-Bahnhof",
+		"position": [53.529162,10.075201],
+		"zeit": "9:30",
+		"color": "blue"
+	}, {
+		"title": "Henstedt-Ulzburg",
+		"subtitle": "AKN-Bahnhof",
+		"position": [53.7804014,10.0107607],
+		"zeit": "10:15",
+		"color": "blue"
+	}, {
+		"title": "Ammersbek",
+		"subtitle": "Haus am Schüberg e.V.",
+		"position": [53.686392,10.172855],
+		"zeit": "10:45",
+		"color": "magenta"
+	}, {
+		"title": "Bad Oldesloe",
+		"subtitle": "Bahnhof",
+		"position": [53.8053402,10.382885],
+		"zeit": "8:15",
+		"color": "magenta"
+	}, {
+		"title": "Bargteheide",
+		"subtitle": "Bahnhof",
+		"position": [53.7282,10.269104],
+		"zeit": "9:45",
+		"color": "magenta"
+	}, {
+		"title": "Ahrensburg",
+		"subtitle": "S-Bahnhof",
+		"position": [53.669926,10.2421263],
+		"zeit": "10:30",
+		"color": "magenta"
+	}, {
+		"title": "Reinbek",
+		"subtitle": "S-Bahnhof",
+		"position": [53.508052,10.251044],
+		"zeit": "10:00",
+		"color": "magenta"
+	}, {
+		"title": "Wentorf",
+		"subtitle": "Casinopark",
+		"position": [53.4891156,10.2557341],
+		"zeit": "10:15",
+		"color": "magenta"
+	}, {
+		"title": "Neu-Allermöhe",
+		"subtitle": "Grachtenplatz",
+		"position": [53.4834793,10.1750512],
+		"zeit": "10:15",
+		"color": "magenta"
+	}, {
+		"title": "Ellerau",
+		"subtitle": "Freibad",
+		"position": [53.7531949,9.9188987],
+		"zeit": "10:00",
+		"color": "blue"
+	}, {
+		"title": "Quickborn",
+		"subtitle": "Rathaus",
+		"position": [53.73274,9.90336],
+		"zeit": "10:30",
+		"color": "blue"
+	}, {
+		"title": "Sodenkamp",
+		"subtitle": "Klimaschutzsiedlung",
+		"position": [53.6309887,10.0515336],
+		"zeit": "11:30",
+		"color": "blue"
+	}
+]
