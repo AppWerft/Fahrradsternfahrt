@@ -8,18 +8,36 @@ exports.create = function() {
 		title : 'Fahrradsternfahrt Hamburg',
 		subtitle : 'Rad fahren – Klima schützen!'
 	});
-	self.mapview = Ti.Map.createView({
+	var radlertext = Ti.UI.createLabel({
+		color : 'white',
+		height : 20,
+		textAlign : 'left',
+		left : 10,
+		bottom : 0,
+		text : 'Wir warten auf die Radler-Daten …',
+		font : {
+			fontSize : 10
+		}
+	});
+	self.backgroundColor = 'black';
+	self.add(radlertext);
+	var mapoptions = {
 		mapType : Ti.Map.TERRAIN_TYPE,
+		bottom : 20,
 		enableZoomControls : false,
 		region : {
-			latitude : 53.553270540,
-			longitude : 10.00963632,
-			latitudeDelta : 0.4,
-			longitudeDelta : 0.4
+			latitude : 53.553,
+			longitude : 10.01,
+			latitudeDelta : 0.5,
+			longitudeDelta : 0.5
 		},
 		animate : true,
 		regionFit : true,
-		userLocation : true
+		userLocation : false
+	};
+	self.mapview = Ti.App.SmartMap.getView(mapoptions);
+	self.mapview.addEventListener('changed', function(_e) {
+		radlertext.setText(_e.text);
 	});
 	self.mapview.addEventListener('complete', function() {
 		var routes = Ti.App.Sternfahrt.getAllRoutes();
@@ -61,7 +79,7 @@ exports.create = function() {
 	self.mapview.addEventListener('click', function(_e) {
 
 	});
-
+	Ti.App.SmartMap.startCron();
 	return self;
 };
 

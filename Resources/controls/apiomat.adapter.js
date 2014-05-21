@@ -55,23 +55,7 @@ ApiomatAdapter.prototype.loginUser = function() {
 	return this;
 };
 
-ApiomatAdapter.prototype.setPosition = function(args) {
-	var that = this;
-	var myNewPosition = new Apiomat.Position();
-	myNewPosition.setPositionLatitude(args.latitude);
-	myNewPosition.setPositionLongitude(args.longitude);
-	myNewPosition.save({
-		onOK : function() {
-			console.log('Info: newPosition.save successful');
-			Ti.Android && Ti.UI.createNotification({
-				message : 'Position erhalten.'
-			}).show();
-		},
-		onError : function() {
-		}
-	});
 
-};
 
 ApiomatAdapter.prototype.resetLocation = function() {
 	var that = this;
@@ -87,7 +71,47 @@ ApiomatAdapter.prototype.resetLocation = function() {
 	});
 
 };
+ApiomatAdapter.prototype.setPosition = function(args) {
+	var that = this;
+	var myNewPosition = new Apiomat.Position();
+	myNewPosition.setPositionLatitude(args.latitude);
+	myNewPosition.setPositionLongitude(args.longitude);
+	myNewPosition.setDevice(Ti.Platform.model);
+	myNewPosition.save({
+		onOK : function() {
+			console.log('Info: position successful saved ' + myNewPosition);
+		},
+		onError : function() {
+		}
+	});
 
+};
+ApiomatAdapter.prototype.getAllRadler = function(_options,_callbacks) {
+	var that = this;
+	var now = (parseInt(moment().unix()) - 120) * 1000;
+	// letzte 110sec in ms.
+	var query = "createdAt > date(" + now + ") order by createdAt DESC";
+	console.log('Info: QUERY=' + query);
+	Apiomat.Position.getPositions(query, {
+		onOk : function(_positions) {
+			var positions = _positions;
+			var  radlerlist = {};
+			for (var i = 0; i < positions.length; i++) {
+				var user =  positions[i].data.ownerUserName;
+				radlerlist[user] = {
+					latitude : positions[i].getPositionLatitude(),
+					longitude : positions[i].getPositionLongitude(),
+					device : positions[i].getDevice(),
+				};
+			}
+			_callbacks.onOk(radlerlist);
+		},
+		onError : function(error) {
+			console.log('Error: ' + error);
+			_callbacks.onError();
+		}
+	});
+};
 /// SETTER:
 
 module.exports = ApiomatAdapter;

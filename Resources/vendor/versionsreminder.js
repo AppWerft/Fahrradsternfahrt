@@ -16,7 +16,7 @@ exports.start = function() {
 				}), r.show();
 			} else
 				Ti.Android && Ti.UI.createNotification({
-					message : Titanium.App.getName() + " ist in neuester Version (" + Ti.App.getVersion() + ")"
+					message : Ti.App.getName() + " ist in neuester Version (" + Ti.App.getVersion() + ")"
 				}).show();
 		}
 	});
