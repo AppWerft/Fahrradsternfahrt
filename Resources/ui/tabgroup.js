@@ -4,15 +4,19 @@ exports.create = function() {
 		exitOnClose : true,
 	});
 	var tabs = [Ti.UI.createTab({
-		icon : Ti.Android ? null : '/assets/map.png',
+		icon : Ti.Android ? null : '/assets/icons/compass.png',
 		title : 'Karte',
 		window : require('ui/map.window').create()
 	}), Titanium.UI.createTab({
-		icon : Ti.Android ? null : 'assets/location.png',
+		icon : Ti.Android ? null : '/assets/icons/list.png',
 		title : 'Zeitleiste',
 		window : require('ui/timelist.window').create()
+	}), Titanium.UI.createTab({
+		icon : Ti.Android ? null : '/assets/icons/location.png',
+		title : 'Umgebung',
+		window : require('ui/umgebung.window').create()
 	}),Titanium.UI.createTab({
-		icon : Ti.Android ? null : 'assets/location.png',
+		icon : Ti.Android ? null : '/assets/icons/twitterbird.png',
 		title : '#fsfhh @ Twitter',
 		window : require('ui/twitter/window').create()
 	})];
@@ -20,7 +24,6 @@ exports.create = function() {
 		self.addTab(tabs[i]);
 	}
 	if (Ti.Android) {
-
 		self.addEventListener("open", function() {
 			var activity = self.getActivity();
 			if (activity && activity.actionBar) {

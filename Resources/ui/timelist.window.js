@@ -1,7 +1,7 @@
 exports.create = function() {
 	var self = require('vendor/window').create();
-	self.barColor='#F7A900';
-	self.title = 'Zeitleiste';
+	self.barColor = '#F7A900';
+	self.title = 'Zeitleiste der Treffpunkte';
 	self.listview = Ti.UI.createListView({
 		height : Ti.UI.FILL,
 		templates : {
@@ -21,6 +21,9 @@ exports.create = function() {
 				title : {
 					text : p.title,
 					color : p.rgb
+				},
+				dist : {
+					height : 0
 				},
 				zeit : {
 					text : p.zeit

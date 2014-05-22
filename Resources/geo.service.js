@@ -4,29 +4,37 @@ function notify(resp) {
 		alertBody : resp,
 		alertAction : "OK",
 		userInfo : {
-			"hello" : "world"
+			"Radler" : "in Bewegung"
 		},
 		badge : alertCount,
 		date : new Date(new Date().getTime() + 10)
 	});
 }
+var getPosition =function(e) {
+	Ti.Geolocation.removeEventListener('location', getPosition);
+	Ti.App.Apiomat = new (require('controls/apiomat.adapter'))({
+		ononline : function() {
+			Ti.App.Apiomat.loginUser(null, {
+				onOk : function() {
+					Ti.App.Apiomat.setPosition({
+						latitude : e.coords.latitude,
+						longitude : e.coords.longitude
+					});
+				}
+			});
+		},
+		onoffline : function() {
+		}
+	});
+};
 
 function checkLocation() {
 	Ti.Geolocation.accuracy = Ti.Geolocation.ACCURACY_BEST;
-	Ti.Geolocation.distanceFilter = 100;
-	Ti.Geolocation.trackSignificantLocationChange = true;
-	if (Ti.Geolocation.locationServicesEnabled) {
-		Ti.Geolocation.preferredProvider = Ti.Geolocation.PROVIDER_GPS;
-		Ti.Geolocation.getCurrentPosition(function(e) {
-			if (e.error) {
-			} else {
-				Ti.App.Apiomat.setPosition({
-					latitude : e.coords.latitude,
-					longitude : e.coords.longitude
-				});
-			}
-		});
-	}
+	Ti.Geolocation.distanceFilter = 50;
+	Ti.Geolocation.preferredProvider = Ti.Geolocation.PROVIDER_GPS;
+	if (!Ti.Android)
+		Ti.Geolocation.trackSignificantLocationChange = true;
+	Ti.Geolocation.addEventListener('location', getPosition);
 }
 
 if (Ti.Android) {

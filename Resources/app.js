@@ -15,5 +15,5 @@ Ti.App.Apiomat = new (require('controls/apiomat.adapter'))({
 		}
 });
 	
-//require('background.service').start();
+require('background.service').start();
 require('vendor/versionsreminder').start();

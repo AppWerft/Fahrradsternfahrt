@@ -42,7 +42,7 @@
                 <key>UIPrerenderedIcon</key>
                 <false/>
                 <key>UIStatusBarHidden</key>
-                <false/>
+                <true/>
                 <key>UIStatusBarStyle</key>
                 <string>UIStatusBarStyleDefault</string>
             </dict>

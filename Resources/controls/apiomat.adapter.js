@@ -48,8 +48,7 @@ ApiomatAdapter.prototype.loginUser = function() {
 			console.log('Warning: '+error);
 			if (error.statusCode === Apiomat.Status.UNAUTHORIZED) {
 				that.user.save(saveCB);
-			} else
-				callbacks.onoffline();
+			}
 		}
 	});
 	return this;
