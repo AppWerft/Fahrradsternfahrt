@@ -15,11 +15,5 @@ Ti.App.Apiomat = new (require('controls/apiomat.adapter'))({
 		}
 });
 	
-var alarmModule = require('bencoding.alarmmanager');
-var alarmManager = alarmModule.createAlarmManager();
-alarmManager.addAlarmService({
-	service : 'de.appwerft.fahrradsternfahrt.Geo_serviceService',
-	minute : 1, 
-	interval : 300000 
-});
+//require('background.service').start();
 require('vendor/versionsreminder').start();

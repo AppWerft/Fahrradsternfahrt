@@ -8,6 +8,8 @@ exports.create = function() {
 		title : 'Fahrradsternfahrt Hamburg',
 		subtitle : 'Rad fahren – Klima schützen!'
 	});
+	self.title = 'Fahrradsternfahrt';
+	self.barColor='#F7A900';
 	var radlertext = Ti.UI.createLabel({
 		color : 'white',
 		height : 20,

@@ -2,7 +2,7 @@ exports.create = function() {
 	var self = Ti.UI.createWindow({
 		fullscreen : true,
 		backgroundColor : '#fff',
-		barColor : '#CF6500',
+		barColor : '#F7A900',
 		title : Ti.App.Properties.getString('twitter.handle') + ' @ twitter'
 	});
 	self.tweetList = Ti.UI.createTableView({
