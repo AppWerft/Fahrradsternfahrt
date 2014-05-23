@@ -19,10 +19,42 @@ var getDistance = function(lat1, lon1, lat2, lon2) {
 	var d = R * c;
 	return Math.round(d);
 };
+
 Sternfahrt.prototype = {
 	init : function() {
 		var that = this;
+		var styles = [];
+		function getColorFromStyle(style) {
+			for (var i = 0; i < styles.length; i++) {
+				if (styles[i].style == style) {
+					styles[i].IconStyle.Icon.href.replace(/http:\/\/maps\.gstatic\.com\/mapfiles\/ms2\/micons\//gm, '');
+					return;
+				}
+			}
+		}
+
 		var jsonfile = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, '/models/points.json');
+		var kml = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, '/models/StartpunkeFahrradsternfahrt.kml').read().text;
+		var document = new (require("vendor/XMLTools"))(kml).toObject().Document;
+		styles = document.Style;
+		var placemark = document.Placemark;
+		console.log(placemarks);
+		for (var i = 0; i < placemarks.length; i++) {
+			var description = placemarks[i].description.replace(/<!\[CDATA\[/gm, '').replace(/\]\]>/gm, '').replace(/&nbsp;/gm, '').replace(/<.*?>/gm, '').replace(/<\/.*?>/gm, '');
+			console.log(description.split(';')[0]);
+			var zeit = description.split(';')[0].replace(/Startzeit: /, '').replace(/ Uhr/, '');
+			var style = getColorFromStyle(placemarks[i].styleUrl.replace(/#/gm, ''));
+
+			var point = {
+				title : placemarks[i].name,
+				position : [placemarks[i].Point.coordinates.split(',')[1], placemarks[i].Point.coordinates.split(',')[0]],
+				description : description.split('; ')[1],
+				zeit : zeit,
+				style : style,
+				min : parseInt(zeit.split(':')[0]) * 60 + parseInt(zeit.split(':')[1])
+			};
+			console.log(point);
+		}
 		this.points = JSON.parse(jsonfile.read());
 		for (var i = 0; i < this.points.length; i++) {
 			this.points[i].min = parseInt(this.points[i].zeit.split(':')[0]) * 60 + parseInt(this.points[i].zeit.split(':')[1]);
@@ -31,51 +63,52 @@ Sternfahrt.prototype = {
 		this.points.sort(function(a, b) {
 			return a.min - b.min;
 		});
+		return this;
+	},
+	getAllRoutes : function(_options, _callback) {
+		console.log('Info: CONTROL start retrieving routes. ==========================');
+		var routes = [];
 		var xhr = Ti.Network.createHTTPClient({
 			timeout : 60000,
 			onload : function() {
-				var routes =[];
+				console.log('Info: start parsing of json of routes');
 				try {
 					routes = JSON.parse(this.responseText);
+					console.log('Info: JSON parsing successful');
 				} catch(E) {
 					console.log(E);
 					var jsonfile = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, '/models/routes.json');
 					routes = JSON.parse(jsonfile.read());
-				}	
-				that.routes = [];
+				}
+				var maprouteoptions = [];
 				for (var i = 0; i < routes.length; i++) {
 					var listoflocations = routes[i].route;
 					var len = listoflocations.length;
-					var width = (routes[i].width) ? 12 * Ti.Platform.displayCaps.logicalDensityFactor : 4 * Ti.Platform.displayCaps.logicalDensityFactor;
+					var width = (routes[i].width) ? 8 * Ti.Platform.displayCaps.logicalDensityFactor : 4 * Ti.Platform.displayCaps.logicalDensityFactor;
 					if (!Ti.Android)
 						width = 3;
-					that.routes[i] = {
+					maprouteoptions[i] = {
 						point : [],
 						width : width,
 						color : routes[i].color
 					};
 					for (var p = 0; p < len; p++) {
-						if (p == 0)
-							that.routes[i].points = [];
-						that.routes[i].points.push({
+						if (p == 0) {
+							maprouteoptions[i].points = [];
+						}
+						maprouteoptions[i].points.push({
 							latitude : listoflocations[p][0],
 							longitude : listoflocations[p][1]
 						});
 					}
-					Ti.App.fireEvent('routes', {
-						routes : that.routes
-					});
 				};
+				console.log('Info: CONTROL routes parsing complete');
+				_callback && _callback(maprouteoptions);
 			}
 		});
 		xhr.open('GET', 'http://familientagebuch.de/tideradar/sternfahrtrouten.json');
 		xhr.send();
-		jsonfile = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, '/models/routes.json');
-		var routes = JSON.parse(jsonfile.read());
-
-		return this;
 	},
-	
 	getAllPoints : function() {
 		this.points.sort(function(a, b) {
 			return a.min - b.min;

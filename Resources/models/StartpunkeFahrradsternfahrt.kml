@@ -1,0 +1,1009 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.2">
+<Document>
+  <name>Startpunke Fahrradsternfahrt</name>
+  <description><![CDATA[Startpunkte zur Fahrradsternfahrt "Molil ohne Auto" 
+Geschwindigkeit ca. 13 – 15 km/h, geeignet auch für Familien mit Kindern.
+Teilstrecken weiter als 30 km evtl. 15 – 18 km/h
+
+Generell: Anmeldung nicht nötig – nur rechtzeitig am Startpunkt einfinden.]]></description>
+  <Style id="style48">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style10">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style14">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style11">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style7">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style51">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style37">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style62">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style66">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style38">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style60">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/pink.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style46">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style52">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style64">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style20">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style5">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/green.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style44">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style3">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style29">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style58">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style8">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style34">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style33">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style1">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style21">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style31">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style28">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style32">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style45">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style59">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style63">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style61">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style12">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/lightblue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style19">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style57">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style26">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style16">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style23">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style2">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style42">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style65">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style55">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style43">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style15">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style40">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style47">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style22">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style24">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style27">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style9">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style36">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/blue.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style54">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style18">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style39">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style53">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style4">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style17">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style41">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style56">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style35">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style25">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style30">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style50">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style13">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style49">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/red.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Style id="style6">
+    <IconStyle>
+      <Icon>
+        <href>http://maps.gstatic.com/mapfiles/ms2/micons/volcano.png</href>
+      </Icon>
+    </IconStyle>
+  </Style>
+  <Placemark>
+    <name>Bhf. Itzehoe (Umweltzentrum)</name>
+    <description><![CDATA[<font size="4"><span></span></font>Startzeit: 06:45 Uhr; Entfernung zur Abschlußkundgebung: ca. 89 km<br><div dir="ltr">(ohne Polizeibegleitung bis Bhf. Pinneberg)</div>]]></description>
+    <styleUrl>#style48</styleUrl>
+    <Point>
+      <coordinates>9.509901,53.925072,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bhf. Krempe</name>
+    <description><![CDATA[Startzeit: 07:30 Uhr; Entfernung zur Abschlußkundgebung: ca. 77&nbsp;km<br>(ohne Polizeibegleitung bis Bhf. Pinneberg)]]></description>
+    <styleUrl>#style10</styleUrl>
+    <Point>
+      <coordinates>9.481437,53.833809,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bhf. Glückstadt</name>
+    <description><![CDATA[<div dir="ltr">Startzeit: 08:15 Uhr; Entfernung zur Abschlußkundgebung: ca. 69 km<br>(ohne Polizeibegleitung bis Bhf. Pinneberg)</div>]]></description>
+    <styleUrl>#style14</styleUrl>
+    <Point>
+      <coordinates>9.428984,53.788528,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bhf. Elmshorn (Stadtseite)</name>
+    <description><![CDATA[Startzeit: 09:30 Uhr; Entfernung zur Abschlußkundgebung: ca. 49&nbsp;km<br>
+(ohne Polizeibegleitung bis Bhf. Pinneberg)]]></description>
+    <styleUrl>#style11</styleUrl>
+    <Point>
+      <coordinates>9.658517,53.754971,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bhf. Tornesch</name>
+    <description><![CDATA[<div dir="ltr">Startzeit: 10:10 Uhr; Entfernung zur Abschlußkundgebung: ca. 35 km</div>]]></description>
+    <styleUrl>#style7</styleUrl>
+    <Point>
+      <coordinates>9.714403,53.697674,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Marktplatz Uetersen</name>
+    <description><![CDATA[<div dir="ltr">Startzeit: 10:15 Uhr; Entfernung zur Abschlußkundgebung: ca. 35 km</div>]]></description>
+    <styleUrl>#style51</styleUrl>
+    <Point>
+      <coordinates>9.667153,53.683899,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bhf. Pinneberg</name>
+    <description><![CDATA[Startzeit: 11:15 Uhr; Entfernung zur Abschlußkundgebung: ca. 27&nbsp;km]]></description>
+    <styleUrl>#style37</styleUrl>
+    <Point>
+      <coordinates>9.797627,53.655319,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Rathaus Rellingen</name>
+    <description><![CDATA[<div dir="ltr">Startzeit: 11:30 Uhr; Entfernung zur Abschlußkundgebung: ca. 25 km</div>]]></description>
+    <styleUrl>#style62</styleUrl>
+    <Point>
+      <coordinates>9.830189,53.650311,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bahnhof Halstenbek</name>
+    <description><![CDATA[<div dir="ltr">Startzeit: 11:45 Uhr; Entfernung zur Abschlußkundgebung: ca. 22 km</div>]]></description>
+    <styleUrl>#style66</styleUrl>
+    <Point>
+      <coordinates>9.839330,53.630543,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Schenefeld (Holstenplatz)</name>
+    <description><![CDATA[Startzeit: 12:15 Uhr; Entfernung zur Abschlußkundgebung: ca. 16&nbsp;km]]></description>
+    <styleUrl>#style38</styleUrl>
+    <Point>
+      <coordinates>9.836261,53.600872,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Lurup (Eckhoffplatz)</name>
+    <description><![CDATA[Startzeit: 12:30 Uhr; Entfernung zur Abschlußkundgebung: ca. 13&nbsp;km]]></description>
+    <styleUrl>#style60</styleUrl>
+    <Point>
+      <coordinates>9.872332,53.592110,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>S-Bhf. Wedel</name>
+    <description><![CDATA[Startzeit: 8:00 Uhr; Entfernung zur Abschlußkundgebung: ca. 52 km]]></description>
+    <styleUrl>#style46</styleUrl>
+    <Point>
+      <coordinates>9.704447,53.581501,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>S-Bhf. Blankenese</name>
+    <description><![CDATA[Startzeit: 08:45 Uhr; Entfernung zur Abschlußkundgebung: ca. 42 km]]></description>
+    <styleUrl>#style52</styleUrl>
+    <Point>
+      <coordinates>9.814010,53.563854,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Altonaer Balkon</name>
+    <description><![CDATA[Startzeit: 09:30 Uhr; Entfernung zur Abschlußkundgebung: ca. 33 km]]></description>
+    <styleUrl>#style64</styleUrl>
+    <Point>
+      <coordinates>9.934956,53.546234,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Kehrwiederspitze</name>
+    <description><![CDATA[Startzeit: 09:45&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 30 km]]></description>
+    <styleUrl>#style20</styleUrl>
+    <Point>
+      <coordinates>9.983890,53.542717,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Wilhelmsburg S-Bahn</name>
+    <description><![CDATA[Startzeit: 10:20 Uhr; Entfernung zur Abschlußkundgebung: ca. 26 km]]></description>
+    <styleUrl>#style5</styleUrl>
+    <Point>
+      <coordinates>10.007730,53.498489,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Stade (Stadeum)</name>
+    <description><![CDATA[Startzeit: 08:30 Uhr; Entfernung zur Abschlußkundgebung: ca. 55&nbsp;km<br>
+(ohne Polizeibegleitung bis Finkenwerder Markt)]]></description>
+    <styleUrl>#style44</styleUrl>
+    <Point>
+      <coordinates>9.469389,53.603893,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Lühe-Sperrwerk (Schiffsanleger)</name>
+    <description><![CDATA[Startzeit: 09:30&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 39&nbsp;km<br>(ohne Polizeibegleitung bis Finkenwerder Markt)]]></description>
+    <styleUrl>#style3</styleUrl>
+    <Point>
+      <coordinates>9.632435,53.572441,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Este-Sperrwerk (Schiffsanleger Neuenfelde)</name>
+    <description><![CDATA[Startzeit: 10:50&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 24&nbsp;km
+<br>(ohne Polizeibegleitung bis Finkenwerder Markt)]]></description>
+    <styleUrl>#style29</styleUrl>
+    <Point>
+      <coordinates>9.790106,53.535347,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Finkenwerder Markt (Finksweg)</name>
+    <description><![CDATA[Startzeit: 11:30 Uhr; Entfernung zur Abschlußkundgebung: ca. 16 km<br>]]></description>
+    <styleUrl>#style58</styleUrl>
+    <Point>
+      <coordinates>9.874638,53.535686,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Vollhöfner Weiden</name>
+    <description><![CDATA[<div dir="ltr">Startzeit: 11:50 Uhr; Entfernung zur Abschlußkundgebung: ca. 13 km</div>]]></description>
+    <styleUrl>#style8</styleUrl>
+    <Point>
+      <coordinates>9.902415,53.513268,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Buxtehude (Rathaus)</name>
+    <description><![CDATA[Startzeit: 09:30&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 36&nbsp;km <br>(ohne Polizeibegleitung bis S-Bhf. Neugraben)]]></description>
+    <styleUrl>#style34</styleUrl>
+    <Point>
+      <coordinates>9.700145,53.476372,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Neu Wulmstorf (Rathaus)</name>
+    <description><![CDATA[Startzeit: 10:15 Uhr; Entfernung zur Abschlußkundgebung: ca. 26 km<br>
+(ohne Polizeibegleitung bis S-Bhf. Neugraben)]]></description>
+    <styleUrl>#style33</styleUrl>
+    <Point>
+      <coordinates>9.791458,53.468330,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>S-Bhf. Neugraben</name>
+    <description><![CDATA[Startzeit: 11:00&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 22&nbsp;km<br>]]></description>
+    <styleUrl>#style1</styleUrl>
+    <Point>
+      <coordinates>9.852247,53.473858,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Buchholz (Möbel-Kraft Parkplatz)</name>
+    <description><![CDATA[Startzeit: 08:30&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 44&nbsp;km<br> (ohne Polizeibegleitung bis S-Bhf. Neugraben)]]></description>
+    <styleUrl>#style21</styleUrl>
+    <Point>
+      <coordinates>9.860916,53.350704,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>S-Bhf. Harburg Rathaus (Rathausplatz)</name>
+    <description><![CDATA[Startzeit: 10:45&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 24&nbsp;km]]></description>
+    <styleUrl>#style31</styleUrl>
+    <Point>
+      <coordinates>9.980274,53.459110,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bhf. HH-Harburg (ZOB)</name>
+    <description><![CDATA[Startzeit: 11:00 Uhr; Entfernung zur Abschlußkundgebung: ca. 25 km]]></description>
+    <styleUrl>#style28</styleUrl>
+    <Point>
+      <coordinates>9.991636,53.456757,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bhf. Meckelfeld</name>
+    <description><![CDATA[Startzeit: 10:15&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 30&nbsp;km]]></description>
+    <styleUrl>#style32</styleUrl>
+    <Point>
+      <coordinates>10.030797,53.424175,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Hittfeld (Einkaufs-Passage)</name>
+    <description><![CDATA[Startzeit: 09:30&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 36 km<br> (ohne Polizeibegleitung bis Bhf. Meckelfeld)]]></description>
+    <styleUrl>#style45</styleUrl>
+    <Point>
+      <coordinates>9.981830,53.385479,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Jesteburg Seevebrücke</name>
+    <description><![CDATA[<div dir="ltr">Startzeit: 08:10 Uhr; Entfernung zur Abschlußkundgebung: ca.47 km<br></div>]]></description>
+    <styleUrl>#style59</styleUrl>
+    <Point>
+      <coordinates>9.954085,53.307480,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Hanstedt (Alter Geidenhof)</name>
+    <description><![CDATA[Startzeit: 07:30&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca.50 km<br><br>
+]]></description>
+    <styleUrl>#style63</styleUrl>
+    <Point>
+      <coordinates>10.012407,53.257717,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bhf. Winsen/Luhe</name>
+    <description><![CDATA[Startzeit: 09:00&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 46&nbsp;km <br>(ohne Polizeibegleitung bis Bhf. Meckelfeld)]]></description>
+    <styleUrl>#style61</styleUrl>
+    <Point>
+      <coordinates>10.207822,53.354126,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bhf. Lüneburg</name>
+    <description><![CDATA[Startzeit: 07:15&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 80&nbsp;km <br>(ohne Polizeibegleitung bis Bhf. Meckelfeld)]]></description>
+    <styleUrl>#style12</styleUrl>
+    <Point>
+      <coordinates>10.419137,53.250027,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Eidelstedter Platz</name>
+    <description><![CDATA[Startzeit: 11:45 Uhr; Entfernung zur Abschlußkundgebung: ca. 22 km]]></description>
+    <styleUrl>#style19</styleUrl>
+    <Point>
+      <coordinates>9.904132,53.608395,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>U-Bhf. Osterstraße</name>
+    <description><![CDATA[Startzeit: 12:15 Uhr; Entfernung zur Abschlußkundgebung: ca. 16 km]]></description>
+    <styleUrl>#style57</styleUrl>
+    <Point>
+      <coordinates>9.951843,53.576157,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Kellinghusen, Unterer Marktplatz</name>
+    <description><![CDATA[Startzeit: 07:30&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 65 km<br>
+Informationen, Heiner Heidemann 04822/ 6829<br>&nbsp;(ohne Polizeibegleitung)<br>]]></description>
+    <styleUrl>#style26</styleUrl>
+    <Point>
+      <coordinates>9.717793,53.948914,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bad Bramstedt (Roland/Bleeck)</name>
+    <description><![CDATA[Startzeit: 08:30 Uhr; Entfernung zur Abschlußkundgebung: ca. 50 km<br>(ohne Polizeibegleitung)]]></description>
+    <styleUrl>#style16</styleUrl>
+    <Point>
+      <coordinates>9.882910,53.917545,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>AKN-Bhf. Kaltenkirchen</name>
+    <description><![CDATA[<div dir="ltr">Startzeit: 09:30 Uhr; Entfernung zur Abschlußkundgebung: ca. 39 km<br> (ohne Polizeibegleitung)</div>]]></description>
+    <styleUrl>#style23</styleUrl>
+    <Point>
+      <coordinates>9.965672,53.834450,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>AKN-Bhf. Henstedt-Ulzburg</name>
+    <description><![CDATA[Startzeit: 10:15 Uhr; Entfernung zur Abschlußkundgebung: ca. 34 km]]></description>
+    <styleUrl>#style2</styleUrl>
+    <Point>
+      <coordinates>9.982517,53.795315,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>U-Bhf. Norderstedt Mitte (Rathausplatz)</name>
+    <description><![CDATA[Startzeit: 11:15 Uhr; Entfernung zur Abschlußkundgebung: ca. 24 km]]></description>
+    <styleUrl>#style42</styleUrl>
+    <Point>
+      <coordinates>9.992838,53.707497,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Ellerau, Freibad</name>
+    <description><![CDATA[<div dir="ltr">Startzeit: 10:00 Uhr; Entfernung zur Abschlußkundgebung: ca. 34 km<br> (ohne Polizeibegleitung)</div>]]></description>
+    <styleUrl>#style65</styleUrl>
+    <Point>
+      <coordinates>9.918873,53.752998,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Quickborn Rathaus</name>
+    <description><![CDATA[Startzeit: 10:30 Uhr; Entfernung zur Abschlußkundgebung: ca. 31&nbsp;km<br>&nbsp;(ohne Polizeibegleitung)<br>]]></description>
+    <styleUrl>#style55</styleUrl>
+    <Point>
+      <coordinates>9.903944,53.732918,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Hasloh (Peter-Lunding-Schule)</name>
+    <description><![CDATA[Startzeit: 10:30 Uhr; Entfernung zur Abschlußkundgebung: ca. 26&nbsp;km <br>(ohne Polizeibegleitung bis Langenhorner Chaussee)]]></description>
+    <styleUrl>#style43</styleUrl>
+    <Point>
+      <coordinates>9.916406,53.691090,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Schnelsen, Am Dorfteich</name>
+    <description><![CDATA[Startzeit: 11:00 Uhr; Entfernung zur Abschlußkundgebung: ca. 24 km <br>(ohne Polizeibegleitung bis Niendorf)]]></description>
+    <styleUrl>#style15</styleUrl>
+    <Point>
+      <coordinates>9.924930,53.631210,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Niendorf Markt-Kirche</name>
+    <description><![CDATA[Startzeit: 11:30 Uhr; Entfernung zur Abschlußkundgebung: ca. 22 km]]></description>
+    <styleUrl>#style40</styleUrl>
+    <Point>
+      <coordinates>9.950164,53.617226,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>U-Bhf. Ochsenzoll</name>
+    <description><![CDATA[Startzeit: 11:30 Uhr; Entfernung zur Abschlußkundgebung: ca. 21 km]]></description>
+    <styleUrl>#style47</styleUrl>
+    <Point>
+      <coordinates>10.001067,53.678154,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Langenhorner Chaussee/Krohnstieg (Parkplatz)</name>
+    <description><![CDATA[Startzeit: 12:00 Uhr; Entfernung zur Abschlußkundgebung: ca. 17 km]]></description>
+    <styleUrl>#style22</styleUrl>
+    <Point>
+      <coordinates>10.010240,53.648544,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Winterhuder Marktplatz</name>
+    <description><![CDATA[<div dir="ltr">Startzeit: 12:45 Uhr; Entfernung zur Abschlußkundgebung: ca. 9 km</div>]]></description>
+    <styleUrl>#style24</styleUrl>
+    <Point>
+      <coordinates>9.999511,53.594746,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Sodenkamp (Klimaschutzsiedlung)</name>
+    <description><![CDATA[Startzeit: 11:30 Uhr; Entfernung zur Abschlußkundgebung: ca. 20&nbsp;km <br>(ohne Polizeibegleitung bis Bramfelder Dorfplatz)]]></description>
+    <styleUrl>#style27</styleUrl>
+    <Point>
+      <coordinates>10.050774,53.631165,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bramfelder Dorfplatz</name>
+    <description><![CDATA[Startzeit: 12:00 Uhr; Entfernung zur Abschlußkundgebung: ca. 17 km]]></description>
+    <styleUrl>#style9</styleUrl>
+    <Point>
+      <coordinates>10.076550,53.614059,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Saarlandstraße</name>
+    <description><![CDATA[<div dir="ltr">Startzeit: 12:15 Uhr; autofreie Siedlung, Entfernung zur Abschlußkundgebung: ca. 12 km</div>]]></description>
+    <styleUrl>#style36</styleUrl>
+    <Point>
+      <coordinates>10.034723,53.586391,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Ammersbek, Haus am Schüberg (Wulfsdorfer Weg 33)</name>
+    <description><![CDATA[Startzeit: 10:45 Uhr; Entfernung zur Abschlußkundgebung: ca. 30 km<br>(ohne Polizeibegleitung Volksdorf) <br><br>]]></description>
+    <styleUrl>#style54</styleUrl>
+    <Point>
+      <coordinates>10.173340,53.685730,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bhf. Bad Oldesloe</name>
+    <description><![CDATA[Startzeit: 08:15 Uhr; Entfernung zur Abschlußkundgebung: ca. 53&nbsp;km<br>(ohne Polizeibegleitung bis Volksdorf)]]></description>
+    <styleUrl>#style18</styleUrl>
+    <Point>
+      <coordinates>10.381887,53.806099,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bhf. Bargteheide</name>
+    <description><![CDATA[Startzeit: 09:45 Uhr; Entfernung zur Abschlußkundgebung: ca. 39&nbsp;km
+<br>(ohne Polizeibegleitung bis&nbsp; (ohne Polizeibegleitung Volksdorf)]]></description>
+    <styleUrl>#style39</styleUrl>
+    <Point>
+      <coordinates>10.268387,53.728413,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bhf. Ahrensburg</name>
+    <description><![CDATA[Startzeit: 10:30&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 28&nbsp;km<br> (ohne Polizeibegleitung bis U-Bhf.&nbsp;Volksdorf)]]></description>
+    <styleUrl>#style53</styleUrl>
+    <Point>
+      <coordinates>10.235835,53.669510,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>U-Bhf. Volksdorf (Wochenmarkt)</name>
+    <description><![CDATA[Startzeit: 11:15&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 21&nbsp;km]]></description>
+    <styleUrl>#style4</styleUrl>
+    <Point>
+      <coordinates>10.162675,53.650986,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Karlshöhe, Umweltzentrum</name>
+    <description><![CDATA[Startzeit: 12:00&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 15&nbsp;km]]></description>
+    <styleUrl>#style17</styleUrl>
+    <Point>
+      <coordinates>10.107948,53.629395,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>S-Bhf. Poppenbüttel (Stormarnplatz)</name>
+    <description><![CDATA[Startzeit: 11:30&nbsp;Uhr; Entfernung zur Abschlußkundgebung: ca. 19&nbsp;km]]></description>
+    <styleUrl>#style41</styleUrl>
+    <Point>
+      <coordinates>10.095062,53.650742,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>U-Bhf. Farmsen (Westseite)</name>
+    <description><![CDATA[<h2><font size="2"><span>Startzeit: 12:15 Uhr; Entfernung zur Abschlußkundgebung: ca. 12 km</span></font><span> </span><span> </span></h2>]]></description>
+    <styleUrl>#style56</styleUrl>
+    <Point>
+      <coordinates>10.117432,53.606853,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>U-Bhf. Wandsbek Markt (Quarree)</name>
+    <description><![CDATA[Startzeit: 13:00 Uhr; Entfernung zur Abschlußkundgebung: ca. 6 km]]></description>
+    <styleUrl>#style35</styleUrl>
+    <Point>
+      <coordinates>10.066470,53.571964,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Wentorf (Am Casinopark)</name>
+    <description><![CDATA[<h2><font size="2">Startzeit: 10:15 Uhr; </font><font size="2">Entfernung zur Abschlußkundgebung: ca. 29 km<br>(bis Bergedorf ohne Polizeibegleitung)</font></h2>]]></description>
+    <styleUrl>#style25</styleUrl>
+    <Point>
+      <coordinates>10.256124,53.488213,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Neu-Allermöhe, Grachtenplatz</name>
+    <description><![CDATA[Startzeit: 10:15 Uhr; Entfernung zur Abschlußkundgebung: ca. 24 km<font size="2"><br>(bis Bergedorf ohne Polizeibegleitung)</font><br><br>
+]]></description>
+    <styleUrl>#style30</styleUrl>
+    <Point>
+      <coordinates>10.175529,53.483795,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bergedorf Bahnhofvorplatz </name>
+    <description><![CDATA[<div dir="ltr">Startzeit: 11:00 Uhr; Entfernung zur Abschlußkundgebung: ca. 21 km</div>]]></description>
+    <styleUrl>#style50</styleUrl>
+    <Point>
+      <coordinates>10.205870,53.489910,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>U-Bhf. Billstedt (Ausgang Reclamstraße)</name>
+    <description><![CDATA[<div dir="ltr">Startzeit: 12:15 Uhr; Entfernung zur Abschlußkundgebung: ca. 11 km</div>]]></description>
+    <styleUrl>#style13</styleUrl>
+    <Point>
+      <coordinates>10.106392,53.542355,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Bhf. Rahlstedt</name>
+    <description><![CDATA[Startzeit: 12:15 Uhr; Entfernung zur Abschlußkundgebung: ca. 15 km]]></description>
+    <styleUrl>#style49</styleUrl>
+    <Point>
+      <coordinates>10.155230,53.605232,0.000000</coordinates>
+    </Point>
+  </Placemark>
+  <Placemark>
+    <name>Museum der Arbeit, Wiesendamm 3</name>
+    <description><![CDATA[<font size="4"><span style="color:rgb(255, 0, 0)">14:30Uhr Abschlußkundgebung</span></font><br>]]></description>
+    <styleUrl>#style6</styleUrl>
+    <Point>
+      <coordinates>10.045366,53.586266,0.000000</coordinates>
+    </Point>
+  </Placemark>
+</Document>
+</kml>

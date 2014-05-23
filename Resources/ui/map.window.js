@@ -69,6 +69,12 @@ exports.create = function() {
 		});
 		self.mapview.addAnnotation(museumderarbeitpin);
 		self.mapview.selectAnnotation(museumderarbeitpin);
+		Ti.App.Sternfahrt.getAllRoutes(null, function(routes) {
+			console.log('Info: routes are in view and ready to render');
+			for (var i = 0; i < routes.length; i++) {
+				self.mapview.addRoute(Ti.Map.createRoute(routes[i]));
+			}
+		});
 
 	});
 	self.addEventListener('focus', function() {
@@ -77,12 +83,7 @@ exports.create = function() {
 			ready = true;
 		}
 	});
-	Ti.App.addEventListener('routes',function(_e){
-		var routes = _e.routes;
-		for (var i = 0; i < routes.length; i++) {
-			self.mapview.addRoute(Ti.Map.createRoute(routes[i]));
-		}
-	});
+
 	Ti.App.SmartMap.startCron();
 	return self;
 };
