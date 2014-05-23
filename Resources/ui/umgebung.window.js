@@ -26,11 +26,10 @@ exports.create = function() {
 						text : p.zeit
 					},
 					dist : {
-						text : p.disttext
+						text : 'Entfernung: ' +p.disttext
 					},
-					subtitle : {
-						text : p.subtitle,
-						color : p.rgb
+					description : {
+						text : p.description
 					}
 				});
 		}

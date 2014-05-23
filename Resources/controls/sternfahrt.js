@@ -3,11 +3,11 @@ var Sternfahrt = function() {
 	return this;
 };
 const COLORS = {
-	"dgreen" : "#438A5A",
+	"green" : "#438A5A",
 	"blue" : "#1E1E65",
-	"orange" : "#DE6421",
-	"magenta" : "#D53B81",
-	"lgreen" : "#73B532"
+	"pink" : "#DE6421",
+	"red" : "#D53B81",
+	"lightblue" : "#73B532"
 };
 var getDistance = function(lat1, lon1, lat2, lon2) {
 	var R = 6371000;
@@ -26,40 +26,51 @@ Sternfahrt.prototype = {
 		var styles = [];
 		function getColorFromStyle(style) {
 			for (var i = 0; i < styles.length; i++) {
-				if (styles[i].style == style) {
-					styles[i].IconStyle.Icon.href.replace(/http:\/\/maps\.gstatic\.com\/mapfiles\/ms2\/micons\//gm, '');
-					return;
+				if (styles[i].id== style) {
+					//console.log(styles[i].IconStyle.Icon.href);
+					return	styles[i].IconStyle.Icon.href.replace(/http:\/\/maps\.gstatic\.com\/mapfiles\/ms2\/micons\//gm, '');
 				}
 			}
 		}
 
-		var jsonfile = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, '/models/points.json');
+		//var jsonfile = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, '/models/points.json');
 		var kml = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory, '/models/StartpunkeFahrradsternfahrt.kml').read().text;
 		var document = new (require("vendor/XMLTools"))(kml).toObject().Document;
 		styles = document.Style;
-		var placemark = document.Placemark;
-		console.log(placemarks);
+		var placemarks = document.Placemark;
+		this.points = [];
 		for (var i = 0; i < placemarks.length; i++) {
-			var description = placemarks[i].description.replace(/<!\[CDATA\[/gm, '').replace(/\]\]>/gm, '').replace(/&nbsp;/gm, '').replace(/<.*?>/gm, '').replace(/<\/.*?>/gm, '');
-			console.log(description.split(';')[0]);
-			var zeit = description.split(';')[0].replace(/Startzeit: /, '').replace(/ Uhr/, '');
+			var description = placemarks[i].description
+				.replace(/<!\[CDATA\[/gm, '')
+				.replace(/\]\]>/gm, '')
+				.replace(/&nbsp;/gm, '')
+				.replace(/<.*?>/gm, '')
+				.replace(/<\/.*?>/gm, '')
+				.replace(/\(/gm, '\n(');
+			var zeit = description.split(';')[0]
+				.replace(/Startzeit: /, '')
+				.replace(/Abschlußkundgebung/, '')
+				.replace(/( Uhr|Uhr)/, '')
+				.replace(/^0/,'')
+				.replace(/[\s]+/,'');
 			var style = getColorFromStyle(placemarks[i].styleUrl.replace(/#/gm, ''));
-
+			var color = style.replace('.png','');
 			var point = {
-				title : placemarks[i].name,
+				title : placemarks[i].name.replace('Bhf.','Bahnhof'),
 				position : [placemarks[i].Point.coordinates.split(',')[1], placemarks[i].Point.coordinates.split(',')[0]],
 				description : description.split('; ')[1],
 				zeit : zeit,
-				style : style,
+				color : color ,
+				rgb : COLORS[color],
 				min : parseInt(zeit.split(':')[0]) * 60 + parseInt(zeit.split(':')[1])
 			};
-			console.log(point);
+			this.points.push(point);
 		}
-		this.points = JSON.parse(jsonfile.read());
-		for (var i = 0; i < this.points.length; i++) {
-			this.points[i].min = parseInt(this.points[i].zeit.split(':')[0]) * 60 + parseInt(this.points[i].zeit.split(':')[1]);
-			this.points[i].rgb = COLORS[this.points[i].color];
-		}
+//		this.points = JSON.parse(jsonfile.read());
+//		for (var i = 0; i < this.points.length; i++) {
+//			this.points[i].min = parseInt(this.points[i].zeit.split(':')[0]) * 60 + parseInt(this.points[i].zeit.split(':')[1]);
+//			this.points[i].rgb = COLORS[this.points[i].color];
+//		}
 		this.points.sort(function(a, b) {
 			return a.min - b.min;
 		});

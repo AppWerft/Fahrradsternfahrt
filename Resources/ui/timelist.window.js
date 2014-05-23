@@ -5,7 +5,7 @@ exports.create = function() {
 	self.listview = Ti.UI.createListView({
 		height : Ti.UI.FILL,
 		templates : {
-			'template' : require('ui/TEMPLATES').nearme
+			'template' : require('ui/TEMPLATES').timeline
 		},
 		defaultItemTemplate : 'template',
 	});
@@ -28,9 +28,8 @@ exports.create = function() {
 				zeit : {
 					text : p.zeit
 				},
-				subtitle : {
-					text : p.subtitle,
-					color : p.rgb
+				description : {
+					text : p.description
 				}
 			});
 	}

@@ -11,21 +11,23 @@
     <fullscreen>true</fullscreen>
     <navbar-hidden>true</navbar-hidden>
     <analytics>false</analytics>
-    
-    
     <property name="twitter.consumerkey">oPZ0BvXVMgADagcWPYzsg</property>
     <property name="twitter.consumersecret">uBPjIxmoT0pYw8WBnYb1r3jLjn4CiKoMs0T3feAgvs</property>
     <property name="twitter.handle">#fsfhh</property>
     <guid>d36d656f-4223-417c-9ae1-6a5c95942618</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
-    <iphone><backgroundModes><mode>location</mode></backgroundModes></iphone>
+    <iphone>
+        <backgroundModes>
+            <mode>location</mode>
+        </backgroundModes>
+    </iphone>
     <ios>
         <plist>
             <dict>
-            		<key>UIBackgroundModes</key>
-				<array>
-   					<string>location</string>
-				</array>
+                <key>UIBackgroundModes</key>
+                <array>
+                    <string>location</string>
+                </array>
                 <key>UISupportedInterfaceOrientations~iphone</key>
                 <array>
                     <string>UIInterfaceOrientationPortrait</string>

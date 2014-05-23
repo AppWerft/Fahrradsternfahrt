@@ -11,11 +11,13 @@ function notify(resp) {
 	});
 }
 var getPosition =function(e) {
+	console.log('Info: start getPosition');
 	Ti.Geolocation.removeEventListener('location', getPosition);
 	Ti.App.Apiomat = new (require('controls/apiomat.adapter'))({
 		ononline : function() {
 			Ti.App.Apiomat.loginUser(null, {
 				onOk : function() {
+					console.log('Info: sending position to cloud');
 					Ti.App.Apiomat.setPosition({
 						latitude : e.coords.latitude,
 						longitude : e.coords.longitude
@@ -29,6 +31,7 @@ var getPosition =function(e) {
 };
 
 function checkLocation() {
+	console.log('Info: start checkLocation');
 	Ti.Geolocation.accuracy = Ti.Geolocation.ACCURACY_BEST;
 	Ti.Geolocation.distanceFilter = 50;
 	Ti.Geolocation.preferredProvider = Ti.Geolocation.PROVIDER_GPS;
