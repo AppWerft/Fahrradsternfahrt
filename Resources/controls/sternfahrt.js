@@ -64,7 +64,7 @@ Sternfahrt.prototype = {
 				rgb : COLORS[color],
 				min : parseInt(zeit.split(':')[0]) * 60 + parseInt(zeit.split(':')[1])
 			};
-			this.points.push(point);
+			if (color != 'volcano') this.points.push(point);
 		}
 //		this.points = JSON.parse(jsonfile.read());
 //		for (var i = 0; i < this.points.length; i++) {
@@ -95,7 +95,7 @@ Sternfahrt.prototype = {
 				for (var i = 0; i < routes.length; i++) {
 					var listoflocations = routes[i].route;
 					var len = listoflocations.length;
-					var width = (routes[i].width) ? 8 * Ti.Platform.displayCaps.logicalDensityFactor : 4 * Ti.Platform.displayCaps.logicalDensityFactor;
+					var width = (routes[i].width) ? 5 * Ti.Platform.displayCaps.logicalDensityFactor : 2 * Ti.Platform.displayCaps.logicalDensityFactor;
 					if (!Ti.Android)
 						width = 3;
 					maprouteoptions[i] = {

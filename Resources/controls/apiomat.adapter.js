@@ -43,6 +43,7 @@ ApiomatAdapter.prototype.loginUser = function() {
 	this.user.loadMe({
 		onOk : function() {
 			console.log('Info: loadme OK');
+			callbacks.onOk && callbacks.onOk();
 		},
 		onError : function(error) {
 			console.log('Warning: '+error);
@@ -54,7 +55,41 @@ ApiomatAdapter.prototype.loginUser = function() {
 	return this;
 };
 
+ApiomatAdapter.prototype.postPhoto = function(_args, _callbacks) {
+	var args = arguments[0] || {}, callbacks = arguments[1] || {}, that = this;
+	var myNewPhoto = new Apiomat.Photo();
+	myNewPhoto.setPositionLatitude(args.latitude);
+	// from getPosition
+	myNewPhoto.setPositionLongitude(args.longitude);
+	myNewPhoto.setTitle(args.title);
+	// ti.blob from camera
+	myNewPhoto.postPhoto(args.photo, function(e) {
+		console.log('Error: ' + e);
+	});
+	myNewPhoto.save({
+		onOK : function() {
+			console.log('Info: newPhoto.save successful');
 
+			Ti.Android && Ti.UI.createNotification({
+				message : 'Photo erhalten.'
+			}).show();
+			that.user.postmyPhotos(myNewPhoto, {
+				onOk : function() {
+					Ti.Android && Ti.UI.createNotification({
+						message : 'Photo erfolgreich gespeichert.'
+					}).show();
+					Ti.Media.vibrate();
+					console.log('Info: photo uploaded');
+				},
+				onError : function() {
+				}
+			});
+		},
+		onError : function() {
+		}
+	});
+
+};
 
 ApiomatAdapter.prototype.resetLocation = function() {
 	var that = this;
@@ -110,6 +145,35 @@ ApiomatAdapter.prototype.getAllRadler = function(_options,_callbacks) {
 			_callbacks.onError();
 		}
 	});
+};
+
+ApiomatAdapter.prototype.getAllPhotos = function(_args, _callbacks) {
+	var that = this;
+	Apiomat.Photo.getPhotos("order by createdAt limit 500", {
+		onOk : function(_res) {
+			that.photos = _res;
+			var photolist = [];
+			for (var i = 0; i < that.photos.length; i++) {
+				var photo = that.photos[i];
+				var ratio = photo.getRatio() || 1.3;
+				photolist.push({
+					id : (photo.data.ownerUserName == that.user.getUserName())//
+					? photo.data.id : undefined,
+					latitude : photo.getPositionLatitude(),
+					longitude : photo.getgetPositionLongitude(),
+					title : photo.getTitle(),
+					thumb : photo.getPhotoURL(200, null, null, null, 'png'),
+					ratio : ratio,
+					bigimage : photo.getPhotoURL(1000, null, null, null, 'png') ,
+				});
+			}
+			_callbacks.onload(photolist);
+		},
+		onError : function(error) {
+			//handle error
+		}
+	});
+
 };
 /// SETTER:
 

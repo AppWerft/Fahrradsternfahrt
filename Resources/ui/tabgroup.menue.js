@@ -5,7 +5,20 @@ exports.create = function(self) {
 			activity.actionBar.setTitle('Fahrradsternfahrt Hamburg');
 			activity.actionBar.setSubtitle('Rad fahren – Klima schützen!');
 			activity.onCreateOptionsMenu = function(e) {
-				console.log('Info: onCreateOptionsMenu started');
+				
+				
+						e.menu.add({
+							title : "Aufnahme",
+							showAsAction : Ti.Android.SHOW_AS_ACTION_ALWAYS,
+							itemId : 3,
+							visible : true,
+							icon : Ti.App.Android.R.drawable.ic_action_camera
+						}).addEventListener("click", function() {
+							require('ui/camera.widget').create();
+						});
+		
+				
+				
 				e.menu.add({
 					title : "Treffpunkte anzeigen",
 					showAsAction : Ti.Android.SHOW_AS_ACTION_NEVER,

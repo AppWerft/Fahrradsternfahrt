@@ -7,6 +7,10 @@ exports.create = function() {
 		icon : Ti.Android ? null : '/assets/icons/compass.png',
 		title : 'Karte',
 		window : require('ui/map.window').create()
+	}),Titanium.UI.createTab({
+		icon : Ti.Android ? null : '/assets/icons/list.png',
+		title : 'Radlerphotos',
+		window : require('ui/photolist.window').create()
 	}), Titanium.UI.createTab({
 		icon : Ti.Android ? null : '/assets/icons/list.png',
 		title : 'Zeitleiste',

@@ -20,6 +20,7 @@ exports.start = function() {
 			minute : 1,
 			interval : 300000
 		});
+		
 	}
 	else if (isiOS4Plus()) {
 		Ti.App.addEventListener('resume', function(e) {

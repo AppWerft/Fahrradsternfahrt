@@ -80,6 +80,9 @@ exports.create = function() {
 	self.addEventListener('focus', function() {
 		if (!ready) {
 			self.add(self.mapview);
+			self.hintview = require('ui/routes.hint').create();
+			self.add(self.hintview);
+			self.hintview.slideup();
 			ready = true;
 		}
 	});
