@@ -146,7 +146,27 @@ ApiomatAdapter.prototype.getAllRadler = function(_options,_callbacks) {
 		}
 	});
 };
-
+ApiomatAdapter.prototype.deletePhoto = function(_id, _callbacks) {
+	for (var i = 0; i < this.photos.length; i++) {
+		// only own phots has an id:
+		if (this.photos[i].data.id && this.photos[i].data.id == _id) {
+			this.photos[i].deleteModel({
+				onOk : function() {
+					Ti.Android && Ti.UI.createNotification({
+						message : 'Photo in Liste gelöscht'
+					}).show();
+					Ti.Media.vibrate();
+					_callbacks.ondeleted();
+					console.log('SUCCESSFUl deleted');
+				},
+				onError : function(error) {
+					console.log(error);
+				}
+			});
+			break;
+		}
+	}
+};
 ApiomatAdapter.prototype.getAllPhotos = function(_args, _callbacks) {
 	var that = this;
 	Apiomat.Photo.getPhotos("order by createdAt limit 500", {
@@ -160,7 +180,7 @@ ApiomatAdapter.prototype.getAllPhotos = function(_args, _callbacks) {
 					id : (photo.data.ownerUserName == that.user.getUserName())//
 					? photo.data.id : undefined,
 					latitude : photo.getPositionLatitude(),
-					longitude : photo.getgetPositionLongitude(),
+					longitude : photo.getPositionLongitude(),
 					title : photo.getTitle(),
 					thumb : photo.getPhotoURL(200, null, null, null, 'png'),
 					ratio : ratio,

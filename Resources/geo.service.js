@@ -1,5 +1,4 @@
 function notify(resp) {
-	// This creates the notification alert on a 'paused' app
 	notification = Ti.App.iOS.scheduleLocalNotification({
 		alertBody : resp,
 		alertAction : "OK",
@@ -11,7 +10,6 @@ function notify(resp) {
 	});
 }
 var getPosition =function(e) {
-	console.log('Info: start getPosition');
 	Ti.Geolocation.removeEventListener('location', getPosition);
 	Ti.App.Apiomat = new (require('controls/apiomat.adapter'))({
 		ononline : function() {
@@ -31,7 +29,6 @@ var getPosition =function(e) {
 };
 
 function checkLocation() {
-	console.log('Info: start checkLocation');
 	Ti.Geolocation.accuracy = Ti.Geolocation.ACCURACY_BEST;
 	Ti.Geolocation.distanceFilter = 50;
 	Ti.Geolocation.preferredProvider = Ti.Geolocation.PROVIDER_GPS;
@@ -46,7 +43,6 @@ if (Ti.Android) {
 	checkLocation();
 } else {
 	Ti.App.iOS.addEventListener('notification', function() {
-		Ti.API.info('background event received = ' + notification);
 		Ti.App.currentService.stop();
 		Ti.App.currentService.unregister();
 	});
