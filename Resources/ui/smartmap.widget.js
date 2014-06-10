@@ -8,7 +8,6 @@ var annotations = [];
 var mapview = null;
 
 SmartMap.prototype.init = function(_options) {
-	require('vendor/playservice')();
 	this.annotations = [1, 2];
 	this.mapview = null;
 };

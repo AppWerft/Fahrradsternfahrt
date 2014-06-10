@@ -35,7 +35,7 @@ exports.create = function() {
 		},
 		animate : true,
 		regionFit : true,
-		userLocation : false
+		userLocation : true
 	};
 	self.mapview = Ti.App.SmartMap.getView(mapoptions);
 	self.mapview.addEventListener('changed', function(_e) {

@@ -30,7 +30,7 @@ var getPosition =function(e) {
 
 function checkLocation() {
 	Ti.Geolocation.accuracy = Ti.Geolocation.ACCURACY_BEST;
-	Ti.Geolocation.distanceFilter = 50;
+	Ti.Geolocation.distanceFilter = 150;
 	Ti.Geolocation.preferredProvider = Ti.Geolocation.PROVIDER_GPS;
 	if (!Ti.Android)
 		Ti.Geolocation.trackSignificantLocationChange = true;

@@ -3,7 +3,7 @@ exports.create = function() {
 		fullscreen : true,
 		backgroundColor : '#fff',
 		barColor : '#CF6500',
-		title : Ti.App.Properties.getString('twitter.handle') + ' @ twitter'
+		title : Ti.App.Properties.getString('twitter.handle') + '@twitter'
 	});
 	self.add(Ti.UI.createImageView({
 		top : 0,
@@ -26,7 +26,7 @@ exports.create = function() {
 	ai.show();
 	self.tweetList = Ti.UI.createTableView({
 		height : Ti.UI.FILL,
-		backgroundColor : 'black'
+		backgroundColor : 'white'
 	});
 
 	self.tweetList.addEventListener('click', function(_e) {

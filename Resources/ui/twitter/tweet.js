@@ -3,7 +3,7 @@ exports.create = function(tweet) {
 		user : tweet.user,
 		tweet : tweet.text,
 		hasDetails : true,
-		height : Ti.UI.SIZE
+		height : Ti.UI.SIZE,backgroundColor:'white'
 	});
 	if (!tweet)
 		return row;
@@ -26,7 +26,7 @@ exports.create = function(tweet) {
 		bottom : '10dp',
 		left : '80dp',
 		right : '5dp',
-		color : '#eee',
+		color : '#222',
 		font : {
 			fontSize : '16dp',
 			fontFamily : 'Centabel Book'

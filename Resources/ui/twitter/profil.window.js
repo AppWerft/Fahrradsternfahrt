@@ -4,6 +4,7 @@ exports.create = function(_user) {
 		subtitle : _user.name,
 		title : 'Twitterprofil'
 	});
+	self.exitOnClose = false;
 	var w = Ti.Platform.displayCaps.platformWidth / Ti.Platform.displayCaps.logicalDensityFactor;
 	var scroller = Ti.UI.createScrollView({
 		scrollType : 'horizontal',
