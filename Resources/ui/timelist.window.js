@@ -13,7 +13,8 @@ exports.create = function() {
 	var dataitems = [];
 	for (var i = 0; i < places.length; i++) {
 		var p = places[i];
-		if (p.title != "")
+		if (p.title != "") {
+			
 			dataitems.push({
 				properties : {
 					itemId : p
@@ -22,17 +23,19 @@ exports.create = function() {
 					text : p.title,
 					color : p.rgb
 				},
-				dist : {
+				distance : {
 					height : 0
 				},
-				zeit : {
+				starttime : {
 					text : p.zeit
 				},
-				description : {
+				fulltext : {
 					text : p.description
 				}
 			});
+		}
 	}
+	console.log(dataitems);
 	self.listview.sections = [Ti.UI.createListSection({
 		items : dataitems
 	})];

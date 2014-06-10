@@ -1,8 +1,8 @@
-exports.start = function() {
+module.exports= function() {
 	var service;
 	function isiOS4Plus() {
 		if (Ti.App.iOS) {
-			var version = T.Platform.version.split(".");
+			var version = Ti.Platform.version.split(".");
 			var major = parseInt(version[0]);
 			if (major >= 4) {
 				return true;
@@ -21,6 +21,7 @@ exports.start = function() {
 		});
 
 	} else if (isiOS4Plus()) {
+		/*
 		Ti.App.addEventListener('resume', function(e) {
 			Ti.API.info("app is resuming from the background");
 		});
@@ -34,6 +35,6 @@ exports.start = function() {
 			service = Ti.App.iOS.registerBackgroundService({
 				url : 'geo.service.js'
 			});
-		});
+		});*/
 	}
 };

@@ -1,4 +1,4 @@
-exports.start = function() {
+module.exports = function() {
 	var url = "https://play.google.com/store/apps/details?id=" + Ti.App.getId();
 	var xhr = Ti.Network.createHTTPClient({
 		onload : function() {

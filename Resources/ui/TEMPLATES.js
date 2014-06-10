@@ -4,7 +4,7 @@ exports.timeline = {
 	},
 	childTemplates : [{
 		type : 'Ti.UI.Label',
-		bindId : 'zeit',
+		bindId : 'starttime',
 		properties : {
 			color : '#666',
 			top : 10,
@@ -13,7 +13,7 @@ exports.timeline = {
 				fontWeight : 'bold',
 				fontFamily : 'Monospace'
 			},
-			right : '15dip',
+			right : 15,
 
 		}
 	}, {
@@ -21,6 +21,7 @@ exports.timeline = {
 		properties : {
 			layout : 'vertical',
 			right : 110,
+			height : Ti.UI.SIZE,
 			left : 10
 		},
 		childTemplates : [{
@@ -41,7 +42,7 @@ exports.timeline = {
 			}
 		}, {
 			type : 'Ti.UI.Label',
-			bindId : 'dist',
+			bindId : 'distance',
 			properties : {
 				color : '#aaa',
 				width : Ti.UI.SIZE,
@@ -56,28 +57,28 @@ exports.timeline = {
 			}
 		}, {
 			type : 'Ti.UI.Label',
-			bindId : 'description',
+			bindId : 'fulltext',
 			properties : {
 				color : '#888',
 				height : Ti.UI.SIZE,
 				font : {
 					fontSize : 14,
-					fontFamily : 'DroidSans'
+					fontFamily : 'Designosaur'
 				},
 				left : 0,
 				bottom : 5
 			}
 		}]
 	}],
-
 };
+
 exports.nearme = {
 	properties : {
 		height : Ti.UI.SIZE,
 	},
 	childTemplates : [{
 		type : 'Ti.UI.Label',
-		bindId : 'zeit',
+		bindId : 'starttime',
 		properties : {
 			color : '#666',
 			top : 10,
@@ -94,7 +95,7 @@ exports.nearme = {
 		properties : {
 			layout : 'vertical',
 			right : 110,
-			left : 10
+			left : 10,height : Ti.UI.SIZE,
 		},
 		childTemplates : [{
 			type : 'Ti.UI.Label',
@@ -114,7 +115,7 @@ exports.nearme = {
 			}
 		}, {
 			type : 'Ti.UI.Label',
-			bindId : 'dist',
+			bindId : 'distance',
 			properties : {
 				color : '#555',
 				width : Ti.UI.SIZE,
@@ -122,25 +123,25 @@ exports.nearme = {
 				text : '',
 				font : {
 					fontSize : 18,
-					fontFamily : 'DroidSans'
+					fontFamily : 'Designosaur'
 				},
 				left : 0,
-				top:5,
+				top : 5,
 			}
 		}, {
 			type : 'Ti.UI.Label',
-			bindId : 'description',
+			bindId : 'fulltext',
 			properties : {
 				color : '#888',
 				height : Ti.UI.SIZE,
 				font : {
 					fontSize : 14,
-					fontFamily : 'DroidSans'
+					fontFamily : 'Designosaur'
 				},
 				left : 0,
+				text : '',
 				bottom : 5
 			}
 		}]
 	}],
-
 };

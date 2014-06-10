@@ -1,4 +1,6 @@
-exports.start = function() {
+module.exports = function() {
+	if (!Ti.Android)
+		return;
 	Ti.Map = require('ti.map');
 	console.log('Info: playservicetest started');
 	if (Ti.Map.isGooglePlayServicesAvailable() != Ti.Map.SUCCESS) {
@@ -15,6 +17,7 @@ exports.start = function() {
 			top : 5,
 			bottom : 5,
 			right : 5,
+			color : 'black',
 			text : "Für die Kartendarstellung brauchts die Google Playdienste. Der fehlt auf dem Gerät oder ist in falscher Version.",
 			textAlign : 'left',
 			left : 120
@@ -28,6 +31,5 @@ exports.start = function() {
 			if (_t.index >= 0)
 				Ti.Platform.openURL('https://play.google.com/store/apps/details?id=com.google.android.gms&hl=de');
 		}), self.show();
-
 	}
 };

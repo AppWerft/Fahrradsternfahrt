@@ -26,7 +26,7 @@ exports.create = function(tweet) {
 		bottom : '10dp',
 		left : '80dp',
 		right : '5dp',
-		color : 'black',
+		color : '#eee',
 		font : {
 			fontSize : '16dp',
 			fontFamily : 'Centabel Book'

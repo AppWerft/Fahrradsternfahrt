@@ -7,23 +7,29 @@ exports.create = function() {
 		icon : Ti.Android ? null : '/assets/icons/compass.png',
 		title : 'Karte',
 		window : require('ui/map.window').create()
-	}),Titanium.UI.createTab({
-		icon : Ti.Android ? null : '/assets/icons/list.png',
-		title : 'Radlerphotos',
-		window : require('ui/photolist.window').create()
-	}), Titanium.UI.createTab({
+	})];
+	if (Ti.Android)
+		Titanium.UI.createTab({
+			icon : Ti.Android ? null : '/assets/icons/list.png',
+			title : 'Radlerphotos',
+			window : require('ui/photolist.window').create()
+		});
+	tabs.push(Titanium.UI.createTab({
 		icon : Ti.Android ? null : '/assets/icons/list.png',
 		title : 'Zeitleiste',
 		window : require('ui/timelist.window').create()
-	}), Titanium.UI.createTab({
+	}));
+	tabs.push(Titanium.UI.createTab({
 		icon : Ti.Android ? null : '/assets/icons/location.png',
 		title : 'Umgebung',
 		window : require('ui/umgebung.window').create()
-	}),Titanium.UI.createTab({
+	}));
+	tabs.push(Titanium.UI.createTab({
 		icon : Ti.Android ? null : '/assets/icons/twitterbird.png',
-		title : '#fsfHH',
+		title : '#fahrradsternfahrt',
 		window : require('ui/twitter/window').create()
-	})];
+	}));
+	;
 	for (var i = 0; i < tabs.length; i++) {
 		self.addTab(tabs[i]);
 	}

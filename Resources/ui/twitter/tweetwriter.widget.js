@@ -36,7 +36,7 @@ exports.create = function() {
 		persistent : false,
 		buttonNames : ['Abbruch', 'Twittern'],
 		androidView : androidview,
-		//message: 'Would you like to delete the file?',
+		message: 'Wenn Du den Hashtag vergisst, wir er einfach angehängt. :-))',
 		title : 'Twitterschreibmaschine'
 	});
 	self.addEventListener('click', function(e) {

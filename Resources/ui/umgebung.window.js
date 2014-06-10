@@ -22,13 +22,13 @@ exports.create = function() {
 						text : p.title,
 						color : p.rgb
 					},
-					zeit : {
+					starttime : {
 						text : p.zeit
 					},
-					dist : {
+					distance : {
 						text : 'Entfernung: ' +p.disttext
 					},
-					description : {
+					fulltext : {
 						text : p.description
 					}
 				});

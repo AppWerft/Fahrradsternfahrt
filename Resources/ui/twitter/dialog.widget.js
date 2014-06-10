@@ -17,13 +17,15 @@ exports.create = function(_parent, _e) {
 
 	var dialog = null;
 	var tweetdata = _e.rowData;
+	
 	var uri_pattern = /\b((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))/ig;
 	var uri = tweetdata.tweet.match(uri_pattern);
 	var options = ['Twitter-Profil'];
 	if (uri != null && uri[0].length > 8) {
 		options.push('external web link');
 	}
-	if (!Ti.Android) options.push('Cancel');
+	if (!Ti.Android)
+		options.push('Cancel');
 	dialog = Ti.UI.createOptionDialog({
 		options : options,
 		title : tweetdata.user.name
@@ -31,11 +33,8 @@ exports.create = function(_parent, _e) {
 	dialog.show();
 	dialog.addEventListener('click', function(_d) {
 		switch(_d.index) {
-			
 			case 0:
-				var win = require('ui/twitter/profil.window').create({
-					title : tweetdata.user
-				});
+				var win = require('ui/twitter/profil.window').create(tweetdata.user);
 				(Ti.Android) ? win.open() : _parent.tab.open(win);
 				break;
 			case 1:
@@ -52,6 +51,6 @@ exports.create = function(_parent, _e) {
 				(Ti.Android) ? win.open() : _parent.tab.open(win);
 				break;
 		}
-		
+
 	});
 };

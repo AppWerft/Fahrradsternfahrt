@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <property name="acs-oauth-secret-development" type="string">Dh2XnoUyROLbzvsazn72bWVvuohsJm1U</property>
-    <property name="acs-oauth-key-development"    type="string">8TjLRXymYslwM6y6kPVJIe0jWOkSvs4y</property>
-    <property name="acs-api-key-development"      type="string">UXfzi7zhbaU77BXKioOGzSEljyvCso5X</property>
-    <property name="acs-oauth-secret-production"  type="string">vFXW4JSys8nGOp3tBvyMKtAx81cygP24</property>
-    <property name="acs-oauth-key-production"     type="string">KRClx54tYs753rS0o01TVwIqOCQSWPei</property>
-    <property name="acs-api-key-production"       type="string">0gik53G7gLLbjll5uAVbkaFodx5HWYaL</property>
+    <property name="acs-oauth-key-development" type="string">8TjLRXymYslwM6y6kPVJIe0jWOkSvs4y</property>
+    <property name="acs-api-key-development" type="string">UXfzi7zhbaU77BXKioOGzSEljyvCso5X</property>
+    <property name="acs-oauth-secret-production" type="string">vFXW4JSys8nGOp3tBvyMKtAx81cygP24</property>
+    <property name="acs-oauth-key-production" type="string">KRClx54tYs753rS0o01TVwIqOCQSWPei</property>
+    <property name="acs-api-key-production" type="string">0gik53G7gLLbjll5uAVbkaFodx5HWYaL</property>
     <property name="acs-push-type-development" type="string">gcm</property>
-	<property name="acs-push-type-production" type="string">gcm</property>
-	<property name="acs-push-type" type="string">gcm</property>
+    <property name="acs-push-type-production" type="string">gcm</property>
+    <property name="acs-push-type" type="string">gcm</property>
     <id>de.appwerft.fahrradsternfahrt</id>
     <name>Sternfahrt</name>
-    <version>1.1.7</version>
+    <version>1.1.4</version>
     <publisher>rainerschleevoigt</publisher>
     <url>http://</url>
     <description>not specified</description>
@@ -22,21 +22,21 @@
     <analytics>false</analytics>
     <property name="twitter.consumerkey">oPZ0BvXVMgADagcWPYzsg</property>
     <property name="twitter.consumersecret">uBPjIxmoT0pYw8WBnYb1r3jLjn4CiKoMs0T3feAgvs</property>
-    <property name="twitter.handle">#fsfhh</property>
+    <property name="twitter.handle">#fahrradsternfahrt</property>
     <guid>d36d656f-4223-417c-9ae1-6a5c95942618</guid>
     <property name="ti.ui.defaultunit" type="string">dp</property>
     <iphone>
-        <backgroundModes>
+        <!--<backgroundModes>
             <mode>location</mode>
-        </backgroundModes>
+     </backgroundModes>-->
     </iphone>
     <ios>
         <plist>
             <dict>
-                <key>UIBackgroundModes</key>
+                <!--<key>UIBackgroundModes</key>
                 <array>
                     <string>location</string>
-                </array>
+                </array>-->
                 <key>UISupportedInterfaceOrientations~iphone</key>
                 <array>
                     <string>UIInterfaceOrientationPortrait</string>
@@ -100,9 +100,9 @@
     <modules>
         <module platform="android">bencoding.alarmmanager</module>
         <module platform="commonjs">ti.cloud</module>
-        <module platform="android">ti.map</module>
-        <module platform="iphone">ti.map</module>
-        <module platform="android">ti.cloudpush</module>
+        <module platform="android" version="2.1.3">ti.map</module>
+        <module platform="iphone" version="2.0.2">ti.map</module>
+        <module platform="android" version="3.2.1">ti.cloudpush</module>
     </modules>
     <deployment-targets>
         <target device="android">true</target>

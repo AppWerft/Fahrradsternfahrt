@@ -1,6 +1,8 @@
 exports.create = function(_user) {
+	console.log();
 	var self = require('vendor/window').create({
-		title : _user.name
+		subtitle : _user.name,
+		title : 'Twitterprofil'
 	});
 	var w = Ti.Platform.displayCaps.platformWidth / Ti.Platform.displayCaps.logicalDensityFactor;
 	var scroller = Ti.UI.createScrollView({

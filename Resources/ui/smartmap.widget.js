@@ -1,9 +1,6 @@
 Ti.Map = require('ti.map');
 
 var SmartMap = function() {
-	if (!(this instanceof SmartMap)) {
-		return new SmartMap();
-	}
 	this.init();
 	return this;
 };
@@ -11,6 +8,7 @@ var annotations = [];
 var mapview = null;
 
 SmartMap.prototype.init = function(_options) {
+	require('vendor/playservice')();
 	this.annotations = [1, 2];
 	this.mapview = null;
 };
