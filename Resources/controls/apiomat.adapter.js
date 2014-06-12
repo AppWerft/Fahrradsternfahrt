@@ -138,6 +138,7 @@ ApiomatAdapter.prototype.getAllRadler = function(_options,_callbacks) {
 					device : positions[i].getDevice(),
 				};
 			}
+			console.log('Info: ' + i + ' new positions');
 			_callbacks.onOk(radlerlist);
 		},
 		onError : function(error) {
