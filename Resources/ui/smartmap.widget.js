@@ -1,16 +1,21 @@
 /*
  * this module is called by:
  * var SmartMap = new (require('ui/smartmap.widget'))();
-   var  mapview = SmartMap.getView(mapoptions);
- * 
+ var  mapview = SmartMap.getView(mapoptions);
+ *
  */
 
-Ti.Map = require('ti.map'); // calling of native map module
-
+Ti.Map = require('ti.map');
+// calling of native map module
 
 /*Constructor */
 var SmartMap = function() {
-	this.annotationviews = [1, 2, 3]; // dummy to test functionality
+	// preventing of non 'new-call'
+	if (!(this instanceof SmartMap)) {
+		return new SmartMap();
+	}
+	this.annotationviews = [1, 2, 3];
+	// dummy to test functionality
 	return this;
 };
 // this runs, but it is without intances ;-((
@@ -20,9 +25,11 @@ var mapview = null;
 SmartMap.prototype = {
 	"getView" : function(_options) {
 		console.log('this.annotationviews=');
-		console.log(this.annotationviews); // "undefined", because this points to global"
+		console.log(this.annotationviews);
+		// "undefined", because this points to global"
 		mapview = Ti.Map.createView(_options);
-		return mapview;    // better would be "this.mapview"
+		return mapview;
+		// better would be "this.mapview"
 	},
 	"updateAnnotations" : function() {
 		Ti.App.Apiomat.getAllRadler(null, {
