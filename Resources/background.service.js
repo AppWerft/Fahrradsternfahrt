@@ -17,7 +17,7 @@ module.exports= function() {
 		alarmManager.addAlarmService({
 			service : 'de.appwerft.fahrradsternfahrt.Geo_serviceService',
 			minute : 1,
-			interval : 300000
+			interval : 60000
 		});
 
 	} else if (isiOS4Plus()) {

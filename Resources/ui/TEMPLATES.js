@@ -32,13 +32,13 @@ exports.timeline = {
 				width : Ti.UI.FILL,
 				height : Ti.UI.SIZE,
 				font : {
-					fontSize : '20dp',
+					fontSize : 20,
 					fontWeight : 'bold',
 					fontFamily : 'Designosaur'
 				},
 				left : 0,
 				right : 0,
-				top : '5dp'
+				top : 5
 			}
 		}, {
 			type : 'Ti.UI.Label',
@@ -105,13 +105,13 @@ exports.nearme = {
 				width : Ti.UI.FILL,
 				height : Ti.UI.SIZE,
 				font : {
-					fontSize : '20dp',
+					fontSize : 20,
 					fontWeight : 'bold',
 					fontFamily : 'Designosaur'
 				},
 				left : 0,
 				right : 0,
-				top : '5dp'
+				top : 5
 			}
 		}, {
 			type : 'Ti.UI.Label',

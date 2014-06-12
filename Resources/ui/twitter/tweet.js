@@ -9,26 +9,26 @@ exports.create = function(tweet) {
 		return row;
 	row.add(Ti.UI.createLabel({
 		text : tweet.user.name + ', ' + tweet.user.location,
-		top : '5dp',
-		left : '80dp',
-		right : '5dp',
+		top : 5,
+		left : 80,
+		right : 5,
 		color : 'silver',
-		height : '24dp',
+		height : 24,
 		font : {
-			fontSize : '14dp',
+			fontSize : 14,
 			fontFamily : 'Centabel Book'
 
 		}
 	}));
 	row.add(Ti.UI.createLabel({
 		text : tweet.text.replace(/&amp;/g,'&'),
-		top : '25dp',
-		bottom : '10dp',
-		left : '80dp',
-		right : '5dp',
+		top : 25,
+		bottom : 10,
+		left : 80,
+		right : 5,
 		color : '#222',
 		font : {
-			fontSize : '16dp',
+			fontSize : 16,
 			fontFamily : 'Centabel Book'
 
 		},
@@ -36,9 +36,9 @@ exports.create = function(tweet) {
 	}));
 	row.add(Ti.UI.createImageView({
 		left : 0,
-		width : '60dp',
-		height : '60dp',
-		top : '10dp',
+		width : 60,
+		height : 60,
+		top : 10,
 		image : tweet.user.profile_image_url
 
 	}));

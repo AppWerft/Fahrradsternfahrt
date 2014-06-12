@@ -3,7 +3,7 @@ module.exports = function() {
 		var dialog = Ti.UI.createAlertDialog({
 			cancel : 1,
 			buttonNames : ['Nein','Jawoll!'],
-			message : 'Möchtest Du anonym Deine Position veröffentlichen? \n\nDann könnte jeder sehen, wo die CriticalMass gerade unterwegs ist',
+			message : 'Möchtest Du anonym Deine Position veröffentlichen? \n\nDann könnte jeder sehen, wo die Sternfahrt gerade unterwegs ist',
 			title : 'Position'
 		});
 		dialog.addEventListener('click', function(e) {

@@ -2,6 +2,7 @@ Ti.Map = require('ti.map');
 
 exports.create = function() {
 	var options = arguments[0] || {};
+	var SmartMap = new (require('ui/smartmap.widget'))();
 	var ready = false;
 	var pins = [];
 	var self = require('vendor/window').create({
@@ -37,7 +38,7 @@ exports.create = function() {
 		regionFit : true,
 		userLocation : true
 	};
-	self.mapview = Ti.App.SmartMap.getView(mapoptions);
+	self.mapview = SmartMap.getView(mapoptions);
 	self.mapview.addEventListener('changed', function(_e) {
 		radlertext.setText(_e.text);
 	});
@@ -80,14 +81,14 @@ exports.create = function() {
 	self.addEventListener('focus', function() {
 		if (!ready) {
 			self.add(self.mapview);
-			self.hintview = require('ui/routes.hint').create();
-			self.add(self.hintview);
-			self.hintview.slideup();
+			//self.hintview = require('ui/routes.hint').create();
+			//self.add(self.hintview);
+			//self.hintview.slideup();
 			ready = true;
 		}
 	});
 
-	Ti.App.SmartMap.startCron();
+	SmartMap.startCron();
 	return self;
 };
 

@@ -122,7 +122,7 @@ ApiomatAdapter.prototype.setPosition = function(args) {
 };
 ApiomatAdapter.prototype.getAllRadler = function(_options,_callbacks) {
 	var that = this;
-	var now = (parseInt(moment().unix()) - 120) * 1000;
+	var now = (parseInt(moment().unix()) - 150) * 1000;
 	// letzte 110sec in ms.
 	var query = "createdAt > date(" + now + ") order by createdAt DESC";
 	console.log('Info: QUERY=' + query);

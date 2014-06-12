@@ -1,6 +1,6 @@
 Ti.UI.setBackgroundColor('orange');
 require('controls/georecord.dialog')();
-Ti.App.SmartMap = new (require('ui/smartmap.widget'))();
+
 Ti.App.Sternfahrt = new (require('controls/sternfahrt'))();
 Ti.App.Twitter = new (require('controls/twitter_adapter'))();
 var splash = require('ui/splash.window')(function(){
