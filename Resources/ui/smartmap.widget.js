@@ -15,20 +15,24 @@ var SmartMap = function() {
 		console.log('Warning: forced calling of "new" in SmartMap');
 		return new SmartMap();
 	}
-	this.annotationviews = [];
-	this.annotationrefs = {};
-	this.dummy = 'dummy';
-	this.mapview = null;
-	return this;
+
+	return this.init();
+	;
 };
 // this runs, but it is without intances ;-((
 
 SmartMap.prototype = {
+	init : function() {
+		/* here we set some instance variables */
+		this.annotationviews = [];
+		this.annotationrefs = {};
+		this.dummy = 'dummy';
+		return this;
+	},
 	getView : function(_options) {
 		this.mapview = Ti.Map.createView(_options);
 		this.dummyview = 'dummyview';
 		return this.mapview;
-		// better would be "this.mapview"
 	},
 	updateAnnotations : function() {
 		if (!Ti.Network.online) {
@@ -37,8 +41,9 @@ SmartMap.prototype = {
 			}).show();
 			return;
 		}
-		console.log('dummy    =' + this.dummy);
-		console.log('dummyview=' + this.dummyview);
+		/* test of scope: */
+		console.log('dummy    =' + this.dummy); // undefined
+		console.log('dummyview=' + this.dummyview);// undefined
 
 		console.log('Info: start retrieving radler');
 		var that = this;
@@ -69,13 +74,14 @@ SmartMap.prototype = {
 					}));
 					count++;
 				}
-				
+
 				that.mapview && that.mapview.addAnnotations(that.annotationviews);
 			}
 		});
 	},
 	startCron : function() {
-		setTimeout(this.updateAnnotations, 6000);
+		/* maybe this is the issue: calling by 'call' ? */
+		setTimeout(this.updateAnnotations, 100);
 		this.cron = setInterval(this.updateAnnotations, 60000);
 	},
 	stopCron : function() {
