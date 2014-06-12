@@ -31,7 +31,6 @@ SmartMap.prototype = {
 	},
 	getView : function(_options) {
 		this.mapview = Ti.Map.createView(_options);
-		this.dummyview = 'dummyview';
 		return this.mapview;
 	},
 	updateAnnotations : function() {
@@ -42,9 +41,8 @@ SmartMap.prototype = {
 			return;
 		}
 		/* test of scope: */
-		console.log('dummy    =' + this.dummy); // undefined
-		console.log('dummyview=' + this.dummyview);// undefined
-
+		console.log('dummy    =' + this.dummy);
+		// undefined
 		console.log('Info: start retrieving radler');
 		var that = this;
 		Ti.App.Apiomat.getAllRadler(null, {
@@ -80,9 +78,11 @@ SmartMap.prototype = {
 		});
 	},
 	startCron : function() {
-		/* maybe this is the issue: calling by 'call' ? */
-		setTimeout(this.updateAnnotations, 100);
-		this.cron = setInterval(this.updateAnnotations, 60000);
+		var that = this;   
+		this.updateAnnotations();
+		this.cron = setInterval(function() {
+			that.updateAnnotations.call(that, {});
+		}, 60000);
 	},
 	stopCron : function() {
 		this.cron && clearInterval(this.cron);
