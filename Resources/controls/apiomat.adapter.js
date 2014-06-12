@@ -141,7 +141,7 @@ ApiomatAdapter.prototype.getAllRadler = function(_options,_callbacks) {
 			_callbacks.onOk(radlerlist);
 		},
 		onError : function(error) {
-			console.log('Error: ' + error);
+			console.log('Error (Apiomat): ' + error);
 			_callbacks.onError();
 		}
 	});

@@ -35,6 +35,9 @@ SmartMap.prototype = {
 		Ti.App.Apiomat.getAllRadler(null, {
 			onError : function() {
 				console.log('Error: adapter.getallradler() sends error');
+				mapview && mapview.fireEvent('changed', {
+					text : 'Derweil keine neuen Radlerdaten. Probleme mit der Wolkenkommunikation'
+				});
 				if (mapview && annotationviews && annotationviews.length)
 					mapview.removeAnnotations(annotationviews);
 			},
