@@ -5,13 +5,13 @@
  *
  */
 
-Ti.Map = require('ti.map');
-// calling of native map module
+Ti.Map = require('ti.map');  // calling of native map module
 
 /*Constructor */
 var SmartMap = function() {
 	// preventing of non 'new-call'
 	if (!(this instanceof SmartMap)) {
+		console.log('Warning: forced calling of "new" in SmartMap');
 		return new SmartMap();
 	}
 	this.annotationviews = [1, 2, 3];
