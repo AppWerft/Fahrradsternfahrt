@@ -1,4 +1,4 @@
-module.exports= function() {
+module.exports = function() {
 	var service;
 	function isiOS4Plus() {
 		if (Ti.App.iOS) {
@@ -10,8 +10,7 @@ module.exports= function() {
 		}
 		return false;
 	}
-
-	if (Ti.Android) {
+	if (Ti.Android && Ti.Platform.Android.API_LEVEL > 14) {
 		var alarmModule = require('bencoding.alarmmanager');
 		var alarmManager = alarmModule.createAlarmManager();
 		alarmManager.addAlarmService({
@@ -22,19 +21,19 @@ module.exports= function() {
 
 	} else if (isiOS4Plus()) {
 		/*
-		Ti.App.addEventListener('resume', function(e) {
-			Ti.API.info("app is resuming from the background");
-		});
-		Ti.App.addEventListener('resumed', function(e) {
-			if (service != null) {
-				service.stop();
-				service.unregister();
-			}
-		});
-		Ti.App.addEventListener('pause', function(e) {
-			service = Ti.App.iOS.registerBackgroundService({
-				url : 'geo.service.js'
-			});
-		});*/
+		 Ti.App.addEventListener('resume', function(e) {
+		 Ti.API.info("app is resuming from the background");
+		 });
+		 Ti.App.addEventListener('resumed', function(e) {
+		 if (service != null) {
+		 service.stop();
+		 service.unregister();
+		 }
+		 });
+		 Ti.App.addEventListener('pause', function(e) {
+		 service = Ti.App.iOS.registerBackgroundService({
+		 url : 'geo.service.js'
+		 });
+		 });*/
 	}
 };

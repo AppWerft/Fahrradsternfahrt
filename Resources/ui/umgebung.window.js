@@ -2,10 +2,9 @@ exports.create = function() {
 	var self = require('vendor/window').create();
 	self.barColor = '#F7A900';
 	self.title = 'Treffpunkte in der Nähe';
-	setTimeout(function() {
-
+	function addList() {
 		self.listview = Ti.UI.createListView({
-			height : Ti.UI.FILL,
+			height : Ti.UI.FILL,backgroundColor : 'white',
 			templates : {
 				'template' : require('ui/TEMPLATES').nearme
 			},
@@ -41,7 +40,13 @@ exports.create = function() {
 			self.add(self.listview);
 
 		});
-	}, 200);
+	};
+	self.addEventListener('focus', function() {
+		if (!self.listadded) {
+			self.listadded = true;
+			addList();
+		}
+	});
 	return self;
 };
 

@@ -1,4 +1,5 @@
 exports.create = function() {
+	Ti.App.Twitter = new (require('controls/twitter_adapter'))();
 	var self = Ti.UI.createWindow({
 		fullscreen : true,
 		backgroundColor : '#fff',

@@ -1,4 +1,4 @@
-exports.create = function(self) {
+module.exports = function(self) {
 	self.addEventListener("open", function() {
 		var activity = self.getActivity();
 		if (activity && activity.actionBar) {
@@ -22,18 +22,18 @@ exports.create = function(self) {
 					title : "Treffpunkte anzeigen",
 					showAsAction : Ti.Android.SHOW_AS_ACTION_NEVER,
 					itemId : "0",
-					checked : (Ti.App.Properties.hasProperty('MEETING')) ? true : false,
+					checked : (Ti.App.Properties.getBool('MEETING')) ? true : false,
 					checkable : true,
 					visible : true
 				}).addEventListener("click", function() {
 					var mapwindow = self.tabs[0].getWindow();
-					if ((Ti.App.Properties.hasProperty('MEETING'))) {
+					if ((Ti.App.Properties.getBool('MEETING'))) {
 						e.menu.findItem("0").setChecked(false);
 						mapwindow.mapview.removeAnnotations(mapwindow.annotations);
-						Ti.App.Properties.removeProperty('MEETING');
+						Ti.App.Properties.setBool('MEETING',false);
 					} else {
 						e.menu.findItem("0").setChecked(true);
-						Ti.App.Properties.setString('MEETING', 'active');
+						Ti.App.Properties.setBool('MEETING', true);
 						mapwindow.mapview.addAnnotations(mapwindow.annotations);
 					}
 
@@ -49,9 +49,11 @@ exports.create = function(self) {
 					if ((Ti.App.Properties.hasProperty('RECORD'))) {
 						e.menu.findItem("1").setChecked(false);
 						Ti.App.Properties.removeProperty('RECORD');
+						Ti.App.fireEvent('stoprecording');
 					} else {
-						Ti.App.Properties.setString('RECORD', 'active');
+						Ti.App.Properties.setBool('RECORD',true);
 						e.menu.findItem("1").setChecked(true);
+						Ti.App.fireEvent('startrecording');
 					}
 				});
 			};

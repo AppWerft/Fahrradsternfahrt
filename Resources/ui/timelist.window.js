@@ -1,10 +1,11 @@
 exports.create = function() {
 	var self = require('vendor/window').create();
+	self.listadded = false;
 	self.barColor = '#F7A900';
 	self.title = 'Zeitleiste der Treffpunkte';
-	setTimeout(function() {
+	function addList() {
 		self.listview = Ti.UI.createListView({
-			height : Ti.UI.FILL,
+			height : Ti.UI.FILL,backgroundColor : 'white',
 			templates : {
 				'template' : require('ui/TEMPLATES').timeline
 			},
@@ -40,7 +41,15 @@ exports.create = function() {
 			items : dataitems
 		})];
 		self.add(self.listview);
-	}, 100);
+	}
+
+
+	self.addEventListener('focus', function() {
+		if (!self.listadded) {
+			self.listadded = true;
+			addList();
+		}
+	});
 	return self;
 };
 

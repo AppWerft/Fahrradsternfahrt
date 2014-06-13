@@ -2,9 +2,9 @@
  * A Twitter library in JavaScript
  *
  * @package codebird
- * @version 2.5.0-alpha.2-dev
- * @author Jublo IT Solutions <support@jublo.net>
- * @copyright 2010-2014 Jublo IT Solutions <support@jublo.net>
+ * @version 2.5.0-rc.2
+ * @author Jublo Solutions <support@jublo.net>
+ * @copyright 2010-2014 Jublo Solutions <support@jublo.net>
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -21,37 +21,38 @@
  */
 
 /* jshint curly: true,
-eqeqeq: true,
-latedef: true,
-quotmark: double,
-undef: true,
-unused: true,
-trailing: true,
-laxbreak: true */
+ eqeqeq: true,
+ latedef: true,
+ quotmark: double,
+ undef: true,
+ unused: true,
+ trailing: true,
+ laxbreak: true */
 /* global window,
-document,
-navigator,
-console,
-ActiveXObject,
-module,
-define,
-require */
+ document,
+ navigator,
+ console,
+ Ti,
+ ActiveXObject,
+ module,
+ define,
+ require */
+(function(undefined) {"use strict";
 
-/**
- * Array.indexOf polyfill
- */
-if (!Array.prototype.indexOf) {
-	Array.prototype.indexOf = function(obj, start) {
-		for (var i = (start || 0); i < this.length; i++) {
-			if (this[i] === obj) {
-				return i;
+	/**
+	 * Array.indexOf polyfill
+	 */
+	if (!Array.prototype.indexOf) {
+		Array.prototype.indexOf = function(obj, start) {
+			for (var i = (start || 0); i < this.length; i++) {
+				if (this[i] === obj) {
+					return i;
+				}
 			}
-		}
-		return -1;
-	};
-}
+			return -1;
+		};
+	}
 
-(function(undefined) {
 	/**
 	 * A Twitter library in JavaScript
 	 *
@@ -83,9 +84,19 @@ if (!Array.prototype.indexOf) {
 		var _endpoint_base = "https://api.twitter.com/";
 
 		/**
+		 * The media API endpoint base to use
+		 */
+		var _endpoint_base_media = "https://upload.twitter.com/";
+
+		/**
 		 * The API endpoint to use
 		 */
 		var _endpoint = _endpoint_base + "1.1/";
+
+		/**
+		 * The media API endpoint to use
+		 */
+		var _endpoint_media = _endpoint_base_media + "1.1/";
 
 		/**
 		 * The API endpoint base to use
@@ -129,7 +140,7 @@ if (!Array.prototype.indexOf) {
 		/**
 		 * The current Codebird version
 		 */
-		var _version = "2.5.0-alpha.2-dev";
+		var _version = "2.5.0-rc.2";
 
 		/**
 		 * Sets the OAuth consumer key and secret (App key)
@@ -397,7 +408,7 @@ if (!Array.prototype.indexOf) {
 			var multipart = _detectMultipart(method_template);
 			var internal = _detectInternal(method_template);
 
-			return _callApi(httpmethod, method, method_template, apiparams, multipart, app_only_auth, internal, callback);
+			return _callApi(httpmethod, method, apiparams, multipart, app_only_auth, internal, callback);
 		};
 
 		/**
@@ -490,7 +501,12 @@ if (!Array.prototype.indexOf) {
 						httpstatus = xml.status;
 					} catch (e) {
 					}
-					var reply = _parseApiReply("oauth2/token", xml.responseText);
+					var response = "";
+					try {
+						response = xml.responseText;
+					} catch (e) {
+					}
+					var reply = _parseApiReply(response);
 					reply.httpstatus = httpstatus;
 					if (httpstatus === 200) {
 						setBearerToken(reply.access_token);
@@ -859,7 +875,7 @@ if (!Array.prototype.indexOf) {
 		 */
 		var _detectMethod = function(method, params) {
 			// multi-HTTP method endpoints
-			switch(method) {
+			switch (method) {
 				case "account/settings":
 				case "account/login_verification_enrollment":
 				case "account/login_verification_request":
@@ -873,7 +889,7 @@ if (!Array.prototype.indexOf) {
 			"statuses/mentions_timeline", "statuses/user_timeline", "statuses/home_timeline", "statuses/retweets_of_me",
 
 			// Tweets
-			"statuses/retweets/:id", "statuses/show/:id", "statuses/oembed",
+			"statuses/retweets/:id", "statuses/show/:id", "statuses/oembed", "statuses/retweeters/ids",
 
 			// Search
 			"search/tweets",
@@ -882,10 +898,10 @@ if (!Array.prototype.indexOf) {
 			"direct_messages", "direct_messages/sent", "direct_messages/show",
 
 			// Friends & Followers
-			"friendships/no_retweets/ids", "friends/ids", "followers/ids", "friendships/lookup", "friendships/incoming", "friendships/outgoing", "friendships/show", "friends/list", "followers/list",
+			"friendships/no_retweets/ids", "friends/ids", "followers/ids", "friendships/lookup", "friendships/incoming", "friendships/outgoing", "friendships/show", "friends/list", "followers/list", "friendships/lookup",
 
 			// Users
-			"account/settings", "account/verify_credentials", "blocks/list", "blocks/ids", "users/lookup", "users/show", "users/search", "users/contributees", "users/contributors", "users/profile_banner",
+			"account/settings", "account/verify_credentials", "blocks/list", "blocks/ids", "users/lookup", "users/show", "users/search", "users/contributees", "users/contributors", "users/profile_banner", "mutes/users/ids", "mutes/users/list",
 
 			// Suggested Users
 			"users/suggestions/:slug", "users/suggestions", "users/suggestions/:slug/members",
@@ -894,7 +910,7 @@ if (!Array.prototype.indexOf) {
 			"favorites/list",
 
 			// Lists
-			"lists/list", "lists/statuses", "lists/memberships", "lists/subscribers", "lists/subscribers/show", "lists/members/show", "lists/members", "lists/show", "lists/subscriptions",
+			"lists/list", "lists/statuses", "lists/memberships", "lists/subscribers", "lists/subscribers/show", "lists/members/show", "lists/members", "lists/show", "lists/subscriptions", "lists/ownerships",
 
 			// Saved searches
 			"saved_searches/list", "saved_searches/show/:id",
@@ -911,11 +927,14 @@ if (!Array.prototype.indexOf) {
 			// Help
 			"help/configuration", "help/languages", "help/privacy", "help/tos", "application/rate_limit_status",
 
+			// Tweets
+			"statuses/lookup",
+
 			// Internal
 			"users/recommendations", "account/push_destinations/device", "activity/about_me", "activity/by_friends", "statuses/media_timeline", "timeline/home", "help/experiments", "search/typeahead", "search/universal", "discover/universal", "conversation/show", "statuses/:id/activity/summary", "account/login_verification_enrollment", "account/login_verification_request", "prompts/suggest", "beta/timelines/custom/list", "beta/timelines/timeline", "beta/timelines/custom/show"];
 			httpmethods.POST = [
 			// Tweets
-			"statuses/destroy/:id", "statuses/update", "statuses/retweet/:id", "statuses/update_with_media",
+			"statuses/destroy/:id", "statuses/update", "statuses/retweet/:id", "statuses/update_with_media", "media/upload",
 
 			// Direct Messages
 			"direct_messages/destroy", "direct_messages/new",
@@ -924,7 +943,7 @@ if (!Array.prototype.indexOf) {
 			"friendships/create", "friendships/destroy", "friendships/update",
 
 			// Users
-			"account/settings__post", "account/update_delivery_device", "account/update_profile", "account/update_profile_background_image", "account/update_profile_colors", "account/update_profile_image", "blocks/create", "blocks/destroy", "account/update_profile_banner", "account/remove_profile_banner",
+			"account/settings__post", "account/update_delivery_device", "account/update_profile", "account/update_profile_background_image", "account/update_profile_colors", "account/update_profile_image", "blocks/create", "blocks/destroy", "account/update_profile_banner", "account/remove_profile_banner", "mutes/users/create", "mutes/users/destroy",
 
 			// Favorites
 			"favorites/destroy", "favorites/create",
@@ -974,7 +993,7 @@ if (!Array.prototype.indexOf) {
 		 * @param string method  The API method to call
 		 * @param array  params  The parameters to send along
 		 *
-		 * @return string The built multipart request body
+		 * @return null|string The built multipart request body
 		 */
 		var _buildMultipart = function(method, params) {
 			// well, files will only work in multipart methods
@@ -1030,6 +1049,18 @@ if (!Array.prototype.indexOf) {
 		};
 
 		/**
+		 * Detects if API call should use media endpoint
+		 *
+		 * @param string method The API method to call
+		 *
+		 * @return bool Whether the method is defined in media API
+		 */
+		var _detectMedia = function(method) {
+			var medias = ["media/upload"];
+			return medias.join(" ").indexOf(method) > -1;
+		};
+
+		/**
 		 * Detects if API call should use old endpoint
 		 *
 		 * @param string method The API method to call
@@ -1052,6 +1083,8 @@ if (!Array.prototype.indexOf) {
 			var url;
 			if (method.substring(0, 5) === "oauth") {
 				url = _endpoint_oauth + method;
+			} else if (_detectMedia(method)) {
+				url = _endpoint_media + method + ".json";
 			} else if (_detectOld(method)) {
 				url = _endpoint_old + method + ".json";
 			} else {
@@ -1067,25 +1100,55 @@ if (!Array.prototype.indexOf) {
 		 */
 		var _getXmlRequestObject = function() {
 			var xml = null;
-			return Ti.Network.createHTTPClient();
+			// first, try the W3-standard object
+			if ( typeof window === "object" && window && typeof window.XMLHttpRequest !== "undefined") {
+				xml = new window.XMLHttpRequest();
+				// then, try Titanium framework object
+			} else if ( typeof Ti === "object" && Ti && typeof Ti.Network.createHTTPClient !== "undefined") {
+				xml = Ti.Network.createHTTPClient({
+					timeout : 30000
+				});
+				// are we in an old Internet Explorer?
+			} else if ( typeof ActiveXObject !== "undefined") {
+				try {
+					xml = new ActiveXObject("Microsoft.XMLHTTP");
+				} catch (e) {
+					console.error("ActiveXObject object not defined.");
+				}
+				// now, consider RequireJS and/or Node.js objects
+			} else if ( typeof require === "function" && require) {
+				// look for xmlhttprequest module
+				try {
+					var XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
+					xml = new XMLHttpRequest();
+				} catch (e1) {
+					// or maybe the user is using xhr2
+					try {
+						var XMLHttpRequest = require("xhr2");
+						xml = new XMLHttpRequest();
+					} catch (e2) {
+						console.error("xhr2 object not defined, cancelling.");
+					}
+				}
+			}
+			return xml;
 		};
 
 		/**
 		 * Calls the API using cURL
 		 *
-		 * @param string          httpmethod      The HTTP method to use for making the request
-		 * @param string          method          The API method to call
-		 * @param string          method_template The templated API method to call
-		 * @param array  optional params          The parameters to send along
-		 * @param bool   optional multipart       Whether to use multipart/form-data
-		 * @param bool   optional $app_only_auth  Whether to use app-only bearer authentication
-		 * @param bool   optional $internal       Whether to use internal call
-		 * @param function        callback        The function to call with the API call result
+		 * @param string          httpmethod    The HTTP method to use for making the request
+		 * @param string          method        The API method to call
+		 * @param array  optional params        The parameters to send along
+		 * @param bool   optional multipart     Whether to use multipart/form-data
+		 * @param bool   optional app_only_auth Whether to use app-only bearer authentication
+		 * @param bool   optional internal      Whether to use internal call
+		 * @param function        callback      The function to call with the API call result
 		 *
 		 * @return mixed The API reply, encoded in the set return_format
 		 */
 
-		var _callApi = function(httpmethod, method, method_template, params, multipart, app_only_auth, internal, callback) {
+		var _callApi = function(httpmethod, method, params, multipart, app_only_auth, internal, callback) {
 			if ( typeof params === "undefined") {
 				params = {};
 			}
@@ -1108,7 +1171,6 @@ if (!Array.prototype.indexOf) {
 			var authorization = null;
 
 			var xml = _getXmlRequestObject();
-			xml.timeout = 60000;
 			if (xml === null) {
 				return;
 			}
@@ -1132,11 +1194,14 @@ if (!Array.prototype.indexOf) {
 					window[callback_name] = function(reply) {
 						reply.httpstatus = 200;
 
-						var rate = {
-							limit : xml.getResponseHeader("x-rate-limit-limit"),
-							remaining : xml.getResponseHeader("x-rate-limit-remaining"),
-							reset : xml.getResponseHeader("x-rate-limit-reset")
-						};
+						var rate = null;
+						if ( typeof xml.getResponseHeader !== "undefined" && xml.getResponseHeader("x-rate-limit-limit") !== "") {
+							rate = {
+								limit : xml.getResponseHeader("x-rate-limit-limit"),
+								remaining : xml.getResponseHeader("x-rate-limit-remaining"),
+								reset : xml.getResponseHeader("x-rate-limit-reset")
+							};
+						}
 						callback(reply, rate);
 					};
 					params.callback = callback_name;
@@ -1149,7 +1214,7 @@ if (!Array.prototype.indexOf) {
 					return;
 
 				} else if (_use_proxy) {
-					url_with_params = url_with_params.replace(_endpoint_base, _endpoint_proxy);
+					url_with_params = url_with_params.replace(_endpoint_base, _endpoint_proxy).replace(_endpoint_base_media, _endpoint_proxy);
 				}
 				xml.open(httpmethod, url_with_params, true);
 			} else {
@@ -1166,7 +1231,7 @@ if (!Array.prototype.indexOf) {
 				}
 				post_fields = params;
 				if (_use_proxy || multipart) {// force proxy for multipart base64
-					url = url.replace(_endpoint_base, _endpoint_proxy);
+					url = url.replace(_endpoint_base, _endpoint_proxy).replace(_endpoint_base_media, _endpoint_proxy);
 				}
 				xml.open(httpmethod, url, true);
 				if (multipart) {
@@ -1182,7 +1247,7 @@ if (!Array.prototype.indexOf) {
 				// automatically fetch bearer token, if necessary
 				if (_oauth_bearer_token === null) {
 					return oauth2_token(function() {
-						_callApi(httpmethod, method, method_template, params, multipart, app_only_auth, false, callback);
+						_callApi(httpmethod, method, params, multipart, app_only_auth, false, callback);
 					});
 				}
 				authorization = "Bearer " + _oauth_bearer_token;
@@ -1196,15 +1261,22 @@ if (!Array.prototype.indexOf) {
 					try {
 						httpstatus = xml.status;
 					} catch (e) {
-						console.log(e);
 					}
-					var reply = _parseApiReply(method_template, xml.responseText);
+					var response = "";
+					try {
+						response = xml.responseText;
+					} catch (e) {
+					}
+					var reply = _parseApiReply(response);
 					reply.httpstatus = httpstatus;
-					var rate = {
-						limit : xml.getResponseHeader("x-rate-limit-limit"),
-						remaining : xml.getResponseHeader("x-rate-limit-remaining"),
-						reset : xml.getResponseHeader("x-rate-limit-reset")
-					};
+					var rate = null;
+					if ( typeof xml.getResponseHeader !== "undefined" && xml.getResponseHeader("x-rate-limit-limit") !== "") {
+						rate = {
+							limit : xml.getResponseHeader("x-rate-limit-limit"),
+							remaining : xml.getResponseHeader("x-rate-limit-remaining"),
+							reset : xml.getResponseHeader("x-rate-limit-reset")
+						};
+					}
 					callback(reply, rate);
 				}
 			};
@@ -1215,16 +1287,18 @@ if (!Array.prototype.indexOf) {
 		/**
 		 * Parses the API reply to encode it in the set return_format
 		 *
-		 * @param string method The method that has been called
 		 * @param string reply  The actual reply, JSON-encoded or URL-encoded
 		 *
 		 * @return array|object The parsed reply
 		 */
-		var _parseApiReply = function(method, reply) {
+		var _parseApiReply = function(reply) {
+			if ( typeof reply !== "string" || reply === "") {
+				return {};
+			}
 			if (reply === "[]") {
 				return [];
 			}
-			var parsed = false;
+			var parsed;
 			try {
 				parsed = JSON.parse(reply);
 			} catch (e) {

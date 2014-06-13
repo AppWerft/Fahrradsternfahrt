@@ -6,6 +6,7 @@ var myPushDeviceToken = null;
 
 var saveCB = {
 	onOk : function() {
+		Ti.App.fireEvent('apiomatready');
 	},
 	onError : function(error) {
 	}
@@ -44,6 +45,7 @@ ApiomatAdapter.prototype.loginUser = function() {
 		onOk : function() {
 			console.log('Info: loadme OK');
 			callbacks.onOk && callbacks.onOk();
+			Ti.App.fireEvent('apiomatready');
 		},
 		onError : function(error) {
 			console.log('Warning: '+error);
@@ -138,7 +140,6 @@ ApiomatAdapter.prototype.getAllRadler = function(_options,_callbacks) {
 					device : positions[i].getDevice(),
 				};
 			}
-			console.log('Info: ' + i + ' new positions');
 			_callbacks.onOk(radlerlist);
 		},
 		onError : function(error) {

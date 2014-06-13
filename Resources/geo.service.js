@@ -9,7 +9,8 @@ function notify(resp) {
 		date : new Date(new Date().getTime() + 10)
 	});
 }
-var getPosition =function(e) {
+
+var getPosition = function(e) {
 	Ti.Geolocation.removeEventListener('location', getPosition);
 	Ti.App.Apiomat = new (require('controls/apiomat.adapter'))({
 		ononline : function() {
@@ -37,14 +38,16 @@ function checkLocation() {
 	Ti.Geolocation.addEventListener('location', getPosition);
 }
 
-if (Ti.Android) {
-	var service = Ti.Android.currentService;
-	var intent = service.getIntent();
-	checkLocation();
-} else {
-	Ti.App.iOS.addEventListener('notification', function() {
-		Ti.App.currentService.stop();
-		Ti.App.currentService.unregister();
-	});
-	var timer = setInterval(checkLocation, 60000);
+if (Ti.App.Properties.hasProperty('RECORD')) {
+	if (Ti.Android) {
+		var service = Ti.Android.currentService;
+		var intent = service.getIntent();
+		checkLocation();
+	} else {
+		Ti.App.iOS.addEventListener('notification', function() {
+			Ti.App.currentService.stop();
+			Ti.App.currentService.unregister();
+		});
+		var timer = setInterval(checkLocation, 60000);
+	}
 }

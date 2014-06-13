@@ -9,7 +9,7 @@ module.exports = function(_callback) {
 		return true;
 	}
 	var self = require('vendor/window').create();
-	//self.navBarHidden=true;
+	self.exitOnClose =true;
 	self.backgroundImage = '/assets/default.png';
 	self.add(Ti.UI.createLabel({
 		bottom : 10,

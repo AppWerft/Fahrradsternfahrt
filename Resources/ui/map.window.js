@@ -12,16 +12,29 @@ exports.create = function() {
 	self.title = 'Fahrradsternfahrt Hamburg 2014';
 	self.barColor = '#F7A900';
 	var radlertext = Ti.UI.createLabel({
-		color : 'white',
+		color : '#eee',
 		height : 20,
 		textAlign : 'left',
-		left : 10,
+		left : 25,
 		bottom : 0,
 		text : 'Wir warten auf die Radler-Daten …',
 		font : {
 			fontSize : 10
 		}
 	});
+	var spinner = Ti.UI.createActivityIndicator({
+		left : 7,
+		bottom : 0,
+		opacity : 0.6
+	});
+	var progressbar = Ti.UI.createView({
+		backgroundColor : 'orange',
+		bottom : 0,
+		height : 1,
+		width : 5
+	});
+	self.add(progressbar);
+	self.add(spinner);
 	self.backgroundColor = 'black';
 	self.add(radlertext);
 	var mapoptions = {
@@ -36,11 +49,28 @@ exports.create = function() {
 		},
 		animate : true,
 		regionFit : true,
-		userLocation : true
+		userLocation : Ti.App.Properties.hasProperty('RECORD') ? true : false
 	};
 	self.mapview = SmartMap.getView(mapoptions);
+
 	self.mapview.addEventListener('changed', function(_e) {
+		if (self.cron)
+			clearInterval(self.cron);
+		progressbar.setWidth(1);
+		self.cron = setInterval(function() {
+			progressbar.setWidth(progressbar.getWidth() + 1);
+		}, 100);
 		radlertext.setText(_e.text);
+		spinner.hide();
+	});
+	self.mapview.addEventListener('start', function(_e) {
+		if (self.cron)
+			clearInterval(self.cron);
+		progressbar.setWidth(1);
+		spinner.show();
+	});
+	self.mapview.addEventListener('longclick', function(_e) {
+		self.mapview.setMapType((self.mapview.getMapType() == Ti.Map.NORMAL_TYPE) ? Ti.Map.TERRAIN_TYPE : Ti.Map.NORMAL_TYPE);
 	});
 	self.mapview.addEventListener('complete', function() {
 		var points = Ti.App.Sternfahrt.getAllPoints();
@@ -55,7 +85,8 @@ exports.create = function() {
 					image : pin,
 					subtitle : 'Treffpunkt um ' + points[i].zeit + ' Uhr'
 				});
-				self.mapview.addAnnotation(annotation);
+				if (Ti.App.Properties.getBool('MEETING'))
+					self.mapview.addAnnotation(annotation);
 				self.annotations.push(annotation);
 			}
 		}
