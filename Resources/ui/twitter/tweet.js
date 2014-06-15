@@ -16,7 +16,7 @@ exports.create = function(tweet) {
 		height : 24,
 		font : {
 			fontSize : 14,
-			fontFamily : 'Centabel Book'
+			fontFamily : 'PTSans-Narrow'
 
 		}
 	}));
@@ -29,7 +29,7 @@ exports.create = function(tweet) {
 		color : '#222',
 		font : {
 			fontSize : 16,
-			fontFamily : 'Centabel Book'
+			fontFamily : 'PTSans-Narrow'
 
 		},
 		height : Ti.UI.SIZE

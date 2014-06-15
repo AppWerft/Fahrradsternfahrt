@@ -34,7 +34,7 @@ exports.timeline = {
 				font : {
 					fontSize : 20,
 					fontWeight : 'bold',
-					fontFamily : 'Designosaur'
+					fontFamily : 'PTSans-NarrowBold'
 				},
 				left : 0,
 				right : 0,
@@ -50,7 +50,7 @@ exports.timeline = {
 				text : '',
 				font : {
 					fontSize : 16,
-					fontFamily : 'Designosaur'
+					fontFamily : 'PTSans-Narrow'
 				},
 				left : 0,
 				bottom : 0
@@ -59,11 +59,11 @@ exports.timeline = {
 			type : 'Ti.UI.Label',
 			bindId : 'fulltext',
 			properties : {
-				color : '#888',
+				color : '#666',
 				height : Ti.UI.SIZE,
 				font : {
 					fontSize : 14,
-					fontFamily : 'Designosaur'
+					fontFamily : 'PTSans-Narrow'
 				},
 				left : 0,
 				bottom : 5
@@ -107,7 +107,7 @@ exports.nearme = {
 				font : {
 					fontSize : 20,
 					fontWeight : 'bold',
-					fontFamily : 'Designosaur'
+					fontFamily : 'PTSans-NarrowBold'
 				},
 				left : 0,
 				right : 0,
@@ -123,7 +123,7 @@ exports.nearme = {
 				text : '',
 				font : {
 					fontSize : 18,
-					fontFamily : 'Designosaur'
+					fontFamily : 'PTSans-Narrow'
 				},
 				left : 0,
 				top : 5,
@@ -132,11 +132,11 @@ exports.nearme = {
 			type : 'Ti.UI.Label',
 			bindId : 'fulltext',
 			properties : {
-				color : '#888',
+				color : '#666',
 				height : Ti.UI.SIZE,
 				font : {
 					fontSize : 14,
-					fontFamily : 'Designosaur'
+					fontFamily : 'PTSans-Narrow'
 				},
 				left : 0,
 				text : '',

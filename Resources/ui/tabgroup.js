@@ -23,17 +23,21 @@ exports.create = function() {
 		title : 'Umgebung',
 		window : require('ui/umgebung.window').create()
 	}));
-	if (withcamera)
+	if (withcamera)	
 		tabs.push(Ti.UI.createTab({
 			icon : (withicons) ?'/assets/icons/list.png':null,
 			title : 'Radlerphotos',
 			window : require('ui/photolist.window').create()
 		}));
 	if (!Ti.Android || Ti.Android && Ti.Platform.Android.API_LEVEL >= 14) {
-		tabs.push(Titanium.UI.createTab({
+		tabs.push(Ti.UI.createTab({
 			icon : (withicons) ?'/assets/icons/twitterbird.png':null,
 			title : 'Twitter',
 			window : require('ui/twitter/window').create()
+		}));
+		tabs.push(Ti.UI.createTab({
+			title : 'Zeitraffer',
+			window : require('ui/archiv.window').create()
 		}));
 	}
 	for (var i = 0; i < tabs.length; i++) {

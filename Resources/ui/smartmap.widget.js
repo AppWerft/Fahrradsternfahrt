@@ -127,7 +127,7 @@ SmartMap.prototype = {
 
 		this.cron = setInterval(function() {
 			that.updateAnnotations.call(that, {});
-		}, 30000);
+		}, 25000);
 	},
 	stopCron : function() {
 		this.cron && clearInterval(this.cron);
